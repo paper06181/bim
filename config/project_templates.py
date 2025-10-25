@@ -28,12 +28,7 @@ class ProjectTemplates:
     def get_template(cls, template_name):
         """템플릿 반환"""
         templates = {
-            'cheongdam': cls.CHEONGDAM_COMMERCIAL,
-            'officetel': cls.SMALL_OFFICETEL,
-            'apartment': cls.MEDIUM_APARTMENT,
-            'commercial': cls.SMALL_COMMERCIAL,
-            'office': cls.LARGE_OFFICE,
-            'house': cls.SMALL_HOUSE
+            'cheongdam': cls.CHEONGDAM_COMMERCIAL
         }
         return templates.get(template_name, cls.CHEONGDAM_COMMERCIAL)
 

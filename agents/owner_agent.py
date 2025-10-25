@@ -25,7 +25,7 @@ class OwnerAgent(BaseAgent):
     def _initial_response(self, issue, project):
         """초기 응답"""
         if self.use_llm:
-            system_prompt = """당신은 청담동 근린생활시설 신축공사의 건축주(발주자)입니다.
+            system_prompt = f"""당신은 {project.name}의 건축주(발주자)입니다.
 
 역할:
 - 프로젝트 소유주이자 최종 의사결정권자
@@ -58,7 +58,7 @@ class OwnerAgent(BaseAgent):
     def _decision_response(self, issue, project, impact_result):
         """의사결정 응답"""
         if self.use_llm:
-            system_prompt = """당신은 청담동 근린생활시설 신축공사의 건축주(발주자)입니다.
+            system_prompt = f"""당신은 {project.name}의 건축주(발주자)입니다.
 
 역할:
 - 최종 의사결정권자

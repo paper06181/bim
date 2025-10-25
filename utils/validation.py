@@ -6,11 +6,16 @@ import json
 
 class ResultValidator:
     """결과 검증기"""
-    
+
     def __init__(self, benchmark_file='data/benchmark_data.json'):
         """벤치마크 데이터 로드"""
-        with open(benchmark_file, 'r', encoding='utf-8') as f:
-            self.benchmark = json.load(f)
+        try:
+            with open(benchmark_file, 'r', encoding='utf-8') as f:
+                self.benchmark = json.load(f)
+        except FileNotFoundError:
+            print(f"[Warning] 벤치마크 파일을 찾을 수 없습니다: {benchmark_file}")
+            print("[Warning] 기본 벤치마크 값을 사용합니다.")
+            self.benchmark = self._get_default_benchmark()
     
     def validate_results(self, metrics, scenario_type):
         """
@@ -80,6 +85,34 @@ class ResultValidator:
             'deviation_percent': deviation
         }
     
+    def _get_default_benchmark(self):
+        """기본 벤치마크 데이터 (파일 없을 시 사용)"""
+        return {
+            "industry_average": {
+                "traditional": {
+                    "budget_overrun": 0.22,
+                    "schedule_delay": 0.23,
+                    "rfi_count": 150,
+                    "rework_rate": 0.12,
+                    "description": "업계 평균 전통 방식 (기본값)"
+                },
+                "bim": {
+                    "budget_overrun": 0.08,
+                    "schedule_delay": 0.10,
+                    "rfi_count": 60,
+                    "rework_rate": 0.05,
+                    "description": "업계 평균 BIM 적용 (기본값)"
+                }
+            },
+            "validation_range": {
+                "budget_overrun_min": 0.0,
+                "budget_overrun_max": 0.50,
+                "schedule_delay_min": 0.0,
+                "schedule_delay_max": 0.50,
+                "description": "허용 범위 확대 (연구용)"
+            }
+        }
+
     def print_validation_report(self, validation_result):
         """검증 보고서 출력"""
         print(f"\n{'='*60}")

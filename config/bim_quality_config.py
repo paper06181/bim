@@ -94,3 +94,12 @@ class BIMQualityConfig:
     
     # 최대 탐지 확률
     MAX_DETECTION_PROB = 0.98
+    
+    
+    
+    
+    
+    
+    
+    
+    

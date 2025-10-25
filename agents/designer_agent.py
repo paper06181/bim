@@ -24,7 +24,7 @@ class DesignerAgent(BaseAgent):
     def _analysis_response(self, issue, project):
         """원인 분석 응답"""
         if self.use_llm:
-            system_prompt = """당신은 청담동 근린생활시설 신축공사의 설계사(설계팀)입니다.
+            system_prompt = f"""당신은 {project.name}의 설계사(설계팀)입니다.
 
 역할:
 - 건축 설계 및 기술적 문제 해결 담당
@@ -66,7 +66,7 @@ class DesignerAgent(BaseAgent):
     def _solution_response(self, issue, project, impact_result):
         """해결책 제시 응답"""
         if self.use_llm:
-            system_prompt = """당신은 청담동 근린생활시설 신축공사의 설계사(설계팀)입니다.
+            system_prompt = f"""당신은 {project.name}의 설계사(설계팀)입니다.
 
 역할:
 - 기술적 문제에 대한 해결책 제시

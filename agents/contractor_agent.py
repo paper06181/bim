@@ -23,7 +23,7 @@ class ContractorAgent(BaseAgent):
     def _report_response(self, issue, project):
         """문제 보고 응답"""
         if self.use_llm:
-            system_prompt = """당신은 청담동 근린생활시설 신축공사의 시공사(현장소장)입니다.
+            system_prompt = f"""당신은 {project.name}의 시공사(현장소장)입니다.
 
 역할:
 - 현장 시공 책임자
@@ -65,7 +65,7 @@ class ContractorAgent(BaseAgent):
     def _execution_response(self, issue, project, impact_result):
         """실행 계획 응답"""
         if self.use_llm:
-            system_prompt = """당신은 청담동 근린생활시설 신축공사의 시공사(현장소장)입니다.
+            system_prompt = f"""당신은 {project.name}의 시공사(현장소장)입니다.
 
 역할:
 - 실행 계획 수립 및 자원 배치

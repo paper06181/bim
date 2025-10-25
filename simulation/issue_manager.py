@@ -22,22 +22,23 @@ class IssueManager:
         self.triggered_issues = []
         self.pending_issues = self.all_issues.copy()
         self.random_seed = random_seed
-
-        # 시드가 지정되면 설정
-        if random_seed is not None:
-            random.seed(random_seed)
     
     def check_and_trigger_issues(self, project):
         """현재 단계에서 발생 가능한 이슈 확인"""
         current_phase = project.current_phase
         triggered = []
-        
+
+        # 시드 기반으로 동일한 난수 시퀀스 보장 (BIM ON/OFF 비교용)
+        if self.random_seed is not None:
+            # 현재 날짜를 기반으로 시드 재설정하여 각 날짜마다 동일한 난수 생성
+            random.seed(self.random_seed + project.current_day)
+
         for issue in self.pending_issues[:]:
             if self._should_trigger(issue, project):
                 triggered.append(issue)
                 self.triggered_issues.append(issue)
                 self.pending_issues.remove(issue)
-        
+
         return triggered
     
     def _should_trigger(self, issue, project):

@@ -50,9 +50,11 @@ class BIMQuality:
         if base_detectability == 0:
             return 0.0
         
-        k = BIMQualityConfig.SIGMOID_K #softmax함수 
-        x0 = BIMQualityConfig.SIGMOID_X0
-        
+        # Sigmoid 함수 파라미터
+        k = BIMQualityConfig.SIGMOID_K  # 기울기 (가파른 정도)
+        x0 = BIMQualityConfig.SIGMOID_X0  # 변곡점 (중간값)
+
+        # Sigmoid 함수: S자 곡선으로 0~1 사이 확률 반환
         sigmoid = 1 / (1 + math.exp(-k * (bim_effectiveness - x0)))
         
         detection_prob = base_detectability * sigmoid

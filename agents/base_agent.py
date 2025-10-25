@@ -45,6 +45,10 @@ class BaseAgent:
                 user_message,
                 temperature
             )
+            # LLM 에러 응답 체크 (LLMClient에서 반환하는 에러 메시지)
+            if response and "[LLM 응답 생성 실패" in response:
+                print(f"[{self.name}] LLM 응답 실패 - 기본 템플릿 사용")
+                return None
             return response
         except Exception as e:
             print(f"[{self.name}] LLM 응답 실패: {e}")

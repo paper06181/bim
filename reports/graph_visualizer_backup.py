@@ -23,56 +23,73 @@ class GraphVisualizer:
         self.output_dir.mkdir(exist_ok=True)
 
     def _setup_korean_font(self):
-        """한글 폰트 직접 로드 - TTF 파일 경로 지정 방식"""
+        """한글 폰트 설정 (Windows 환경)"""
         import os
         import warnings
 
-        # 모든 경고 숨기기
-        warnings.filterwarnings('ignore')
+        # matplotlib 폰트 캐시 강제 삭제 (한글 폰트 인식 문제 해결)
+        import matplotlib
+        cache_dir = matplotlib.get_cachedir()
+        cache_file = os.path.join(cache_dir, 'fontlist-v330.json')
+        if os.path.exists(cache_file):
+            try:
+                os.remove(cache_file)
+            except:
+                pass
 
-        # Windows 폰트 파일 직접 로드
-        font_path = r'C:\Windows\Fonts\malgun.ttf'
+        # 폰트 매니저 리로드
+        fm._load_fontmanager(try_read_cache=False)
 
-        if os.path.exists(font_path):
-            # 폰트 파일 직접 등록
-            font_prop = fm.FontProperties(fname=font_path)
-            font_name = font_prop.get_name()
+        # Windows에서 사용 가능한 한글 폰트 목록 (우선순위)
+        korean_fonts = [
+            'Malgun Gothic',
+            'NanumGothic',
+            'NanumBarunGothic',
+            'Gulim',
+            'Dotum',
+            'Batang',
+            'Gungsuh'
+        ]
 
-            # matplotlib 전역 설정
-            plt.rcParams['font.family'] = font_name
-            plt.rcParams['font.sans-serif'] = [font_name]
+        # 시스템에 설치된 폰트 목록
+        available_fonts = set([f.name for f in fm.fontManager.ttflist])
+
+        # 사용 가능한 한글 폰트 찾기
+        selected_font = None
+        for font in korean_fonts:
+            if font in available_fonts:
+                selected_font = font
+                break
+
+        if selected_font:
+            # 폰트 설정 (여러 방법 동시 적용)
+            plt.rcParams['font.family'] = selected_font
+            plt.rcParams['font.sans-serif'] = [selected_font]
             plt.rcParams['axes.unicode_minus'] = False
 
-            print(f"[INFO] Korean font loaded: {font_path}")
-            self.font_prop = font_prop  # 나중에 사용하기 위해 저장
-        else:
-            print("[WARNING] Malgun Gothic TTF not found. Trying fallback...")
-            # 대체 폰트 시도
-            for font_name in ['Malgun Gothic', 'Gulim', 'Batang', 'Dotum']:
-                try:
-                    plt.rcParams['font.family'] = font_name
-                    plt.rcParams['axes.unicode_minus'] = False
-                    print(f"[INFO] Using fallback: {font_name}")
-                    self.font_prop = fm.FontProperties(family=font_name)
-                    return
-                except:
-                    continue
+            # Glyph missing 경고 숨기기
+            warnings.filterwarnings('ignore', category=UserWarning,
+                                  message='.*Glyph.*missing from current font.*')
 
-            print("[ERROR] No Korean font available!")
-            self.font_prop = fm.FontProperties()
+            print(f"[INFO] Korean font set: {selected_font}")
+        else:
+            # 폰트를 찾지 못한 경우
+            print("[WARNING] No Korean font found. Korean text may not display correctly.")
+            print("[INFO] Please install: Malgun Gothic or NanumGothic")
+            plt.rcParams['axes.unicode_minus'] = False
 
     def plot_comparison_bars(self, metrics_off, metrics_on, save_path=None):
         """BIM ON/OFF 비교 막대 그래프"""
         fig, axes = plt.subplots(2, 2, figsize=(14, 10))
-        fig.suptitle('BIM 적용 효과 비교 분석', fontsize=16, fontweight='bold', fontproperties=self.font_prop)
+        fig.suptitle('BIM 적용 효과 비교 분석', fontsize=16, fontweight='bold')
 
         # 1. 공사 지연 비교
         ax1 = axes[0, 0]
         delays = [metrics_off['delay_weeks'], metrics_on['delay_weeks']]
         colors = ['#ff6b6b', '#51cf66']
         bars1 = ax1.bar(['BIM OFF', 'BIM ON'], delays, color=colors, alpha=0.7, edgecolor='black')
-        ax1.set_ylabel('지연 (주)', fontsize=12, fontproperties=self.font_prop)
-        ax1.set_title('공사 지연 비교', fontsize=13, fontweight='bold', fontproperties=self.font_prop)
+        ax1.set_ylabel('지연 (주)', fontsize=12)
+        ax1.set_title('공사 지연 비교', fontsize=13, fontweight='bold')
         ax1.grid(axis='y', alpha=0.3)
 
         # 값 표시
@@ -86,8 +103,8 @@ class GraphVisualizer:
         ax2 = axes[0, 1]
         overruns = [metrics_off['budget_overrun_rate']*100, metrics_on['budget_overrun_rate']*100]
         bars2 = ax2.bar(['BIM OFF', 'BIM ON'], overruns, color=colors, alpha=0.7, edgecolor='black')
-        ax2.set_ylabel('예산 초과율 (%)', fontsize=12, fontproperties=self.font_prop)
-        ax2.set_title('예산 초과율 비교', fontsize=13, fontweight='bold', fontproperties=self.font_prop)
+        ax2.set_ylabel('예산 초과율 (%)', fontsize=12)
+        ax2.set_title('예산 초과율 비교', fontsize=13, fontweight='bold')
         ax2.grid(axis='y', alpha=0.3)
 
         for bar in bars2:
@@ -100,8 +117,8 @@ class GraphVisualizer:
         ax3 = axes[1, 0]
         detection = [metrics_off['detection_rate']*100, metrics_on['detection_rate']*100]
         bars3 = ax3.bar(['BIM OFF', 'BIM ON'], detection, color=colors, alpha=0.7, edgecolor='black')
-        ax3.set_ylabel('탐지율 (%)', fontsize=12, fontproperties=self.font_prop)
-        ax3.set_title('이슈 탐지율 비교', fontsize=13, fontweight='bold', fontproperties=self.font_prop)
+        ax3.set_ylabel('탐지율 (%)', fontsize=12)
+        ax3.set_title('이슈 탐지율 비교', fontsize=13, fontweight='bold')
         ax3.grid(axis='y', alpha=0.3)
         ax3.set_ylim(0, 100)
 
@@ -115,8 +132,8 @@ class GraphVisualizer:
         ax4 = axes[1, 1]
         costs = [metrics_off['cost_increase']/1e8, metrics_on['cost_increase']/1e8]
         bars4 = ax4.bar(['BIM OFF', 'BIM ON'], costs, color=colors, alpha=0.7, edgecolor='black')
-        ax4.set_ylabel('비용 증가 (억원)', fontsize=12, fontproperties=self.font_prop)
-        ax4.set_title('총 비용 증가 비교', fontsize=13, fontweight='bold', fontproperties=self.font_prop)
+        ax4.set_ylabel('비용 증가 (억원)', fontsize=12)
+        ax4.set_title('총 비용 증가 비교', fontsize=13, fontweight='bold')
         ax4.grid(axis='y', alpha=0.3)
 
         for bar in bars4:

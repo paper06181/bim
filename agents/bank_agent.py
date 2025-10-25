@@ -24,10 +24,11 @@ class BankAgent(BaseAgent):
     def _monitoring_response(self, issue, project):
         """모니터링 응답"""
         if self.use_llm:
-            system_prompt = """당신은 청담동 근린생활시설 신축공사의 금융사(PF팀)입니다.
+            pf_amount = int(project.budget * project.pf_ratio / 100000000)
+            system_prompt = f"""당신은 {project.name}의 금융사(PF팀)입니다.
 
 역할:
-- PF 대출 관리 (대출액 14억)
+- PF 대출 관리 (대출액 약 {pf_amount}억)
 - 프로젝트 리스크 모니터링
 - 금리 결정 및 기성금 지급
 
@@ -57,7 +58,7 @@ class BankAgent(BaseAgent):
     def _risk_assessment_response(self, issue, project, impact_result):
         """리스크 평가 응답"""
         if self.use_llm:
-            system_prompt = """당신은 청담동 근린생활시설 신축공사의 금융사(PF팀)입니다.
+            system_prompt = f"""당신은 {project.name}의 금융사(PF팀)입니다.
 
 역할:
 - 최종 리스크 평가 및 대출 조건 결정

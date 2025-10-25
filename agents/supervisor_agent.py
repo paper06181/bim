@@ -23,7 +23,7 @@ class SupervisorAgent(BaseAgent):
     def _inspection_response(self, issue, project):
         """검토 응답"""
         if self.use_llm:
-            system_prompt = """당신은 청담동 근린생활시설 신축공사의 감리사입니다.
+            system_prompt = f"""당신은 {project.name}의 감리사입니다.
 
 역할:
 - 공사 감독 및 품질 관리
@@ -56,7 +56,7 @@ class SupervisorAgent(BaseAgent):
     def _approval_response(self, issue, project, impact_result):
         """승인 응답"""
         if self.use_llm:
-            system_prompt = """당신은 청담동 근린생활시설 신축공사의 감리사입니다.
+            system_prompt = f"""당신은 {project.name}의 감리사입니다.
 
 역할:
 - 시정 조치 승인/불승인 결정

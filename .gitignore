@@ -1,3 +1,30 @@
+# Claude AI
 .claude/
 
+# Python virtual environment
 .venv/
+venv/
+env/
+
+# Environment variables (sensitive data)
+.env
+.env.local
+.env.*.local
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# VSCode
+.vscode/
+
+# Test files
+test_*.py
+
+# Documentation (if not needed in repo)
+# docs/
+
+# Tests (if not needed in repo)
+# tests/
