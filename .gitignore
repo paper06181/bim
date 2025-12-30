@@ -6,10 +6,24 @@
 venv/
 env/
 
+# Documentation folder
+md/
+
+# Output files
+output/logs/
+output/meetings/
+output/results/
+output/daily_logs/
+*.png
+
 # Environment variables (sensitive data)
 .env
 .env.local
 .env.*.local
+
+# Excel files
+*.xlsx
+~$*.xlsx
 
 # Python cache
 __pycache__/

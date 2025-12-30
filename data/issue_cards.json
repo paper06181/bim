@@ -10,13 +10,25 @@
     "cost_increase_min": 0.014,
     "cost_increase_max": 0.022,
     "description": "2D 도면에서 철골 빔과 HVAC 덕트 충돌 미발견",
+    "source": "한국건설관리학회 논문집",
+    "source_reliability": "A",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.95
+      "base_detectability": 0.75,
+      "prevention_effect": 0.20
     },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-09"],
+    "is_positive": false,
     "work_type": "구조",
     "float_days": 0,
-    "occurrence_rate": 0.015
+    "occurrence_rate": 0.015,
+    "origin_phase": "설계"
   },
   {
     "id": "I-02",
@@ -29,13 +41,25 @@
     "cost_increase_min": 0.007,
     "cost_increase_max": 0.011,
     "description": "건축도면과 구조도면의 기둥 위치 200mm 차이",
+    "source": "한국건설관리학회",
+    "source_reliability": "A",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.9
+      "base_detectability": 0.70,
+      "prevention_effect": 0.25
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": ["I-05"],
+    "is_positive": false,
     "work_type": "구조",
     "float_days": 0,
-    "occurrence_rate": 0.012
+    "occurrence_rate": 0.012,
+    "origin_phase": "설계"
   },
   {
     "id": "I-03",
@@ -48,13 +72,25 @@
     "cost_increase_min": 0.008,
     "cost_increase_max": 0.014,
     "description": "수작업 물량 산출로 철근량 15% 과소 계상",
+    "source": "현대건설 BIM 사례",
+    "source_reliability": "A",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.85
+      "base_detectability": 0.65,
+      "prevention_effect": 0.30
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": ["I-13", "I-19"],
+    "is_positive": false,
     "work_type": "설계",
     "float_days": 0,
-    "occurrence_rate": 0.01
+    "occurrence_rate": 0.01,
+    "origin_phase": "설계"
   },
   {
     "id": "I-04",
@@ -65,15 +101,27 @@
     "delay_weeks_min": 1,
     "delay_weeks_max": 2,
     "cost_increase_min": 0.006,
-    "cost_increase_max": 0.010,
+    "cost_increase_max": 0.01,
     "description": "구버전 도면으로 시공 후 철거",
+    "source": "건설관리 논문",
+    "source_reliability": "A",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.9
+      "base_detectability": 0.70,
+      "prevention_effect": 0.35
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-18"],
+    "is_positive": false,
     "work_type": "설계",
     "float_days": 0,
-    "occurrence_rate": 0.008
+    "occurrence_rate": 0.008,
+    "origin_phase": "설계"
   },
   {
     "id": "I-05",
@@ -86,13 +134,25 @@
     "cost_increase_min": 0.003,
     "cost_increase_max": 0.006,
     "description": "평면도와 단면도의 천장 높이 불일치",
+    "source": "한국건설관리학회",
+    "source_reliability": "A",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.9
+      "base_detectability": 0.70,
+      "prevention_effect": 0.25
     },
+    "building_type_filters": {
+      "height": ["중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업"],
+      "scale": ["중형", "소형"]
+    },
+    "related_issues": ["I-02"],
+    "is_positive": false,
     "work_type": "마감",
     "float_days": 14,
-    "occurrence_rate": 0.01
+    "occurrence_rate": 0.01,
+    "origin_phase": "설계"
   },
   {
     "id": "I-06",
@@ -105,13 +165,25 @@
     "cost_increase_min": 0.007,
     "cost_increase_max": 0.011,
     "description": "정보 누락으로 월 40-60건 RFI 발생",
+    "source": "Journal of Civil Engineering 2024",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.8
+      "base_detectability": 0.60,
+      "prevention_effect": 0.40
     },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-04"],
+    "is_positive": false,
     "work_type": "설계",
     "float_days": 0,
-    "occurrence_rate": 0.02
+    "occurrence_rate": 0.02,
+    "origin_phase": "설계"
   },
   {
     "id": "I-07",
@@ -124,13 +196,25 @@
     "cost_increase_min": 0.019,
     "cost_increase_max": 0.028,
     "description": "접합부 치수 오류로 전량 재제작",
+    "source": "한국건설관리학회 논문집",
+    "source_reliability": "A",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.9
+      "base_detectability": 0.70,
+      "prevention_effect": 0.25
     },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
     "work_type": "구조",
     "float_days": 0,
-    "occurrence_rate": 0.005
+    "occurrence_rate": 0.005,
+    "origin_phase": "설계"
   },
   {
     "id": "I-08",
@@ -143,13 +227,25 @@
     "cost_increase_min": 0.008,
     "cost_increase_max": 0.014,
     "description": "2D 오독으로 벽체 잘못 시공",
+    "source": "공동주택 공사 작업지연요소 분석",
+    "source_reliability": "A",
     "bim_effect": {
       "detection_phase": "시공초기",
-      "base_detectability": 0.85
+      "base_detectability": 0.65,
+      "prevention_effect": 0.30
     },
+    "building_type_filters": {
+      "height": ["중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업"],
+      "scale": ["중형", "소형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
     "work_type": "마감",
     "float_days": 7,
-    "occurrence_rate": 0.015
+    "occurrence_rate": 0.015,
+    "origin_phase": "시공"
   },
   {
     "id": "I-09",
@@ -162,13 +258,25 @@
     "cost_increase_min": 0.011,
     "cost_increase_max": 0.017,
     "description": "법정 천장고 미달, 전면 재조정",
+    "source": "한국건설관리학회",
+    "source_reliability": "A",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.95
+      "base_detectability": 0.75,
+      "prevention_effect": 0.20
     },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-01"],
+    "is_positive": false,
     "work_type": "설비",
     "float_days": 7,
-    "occurrence_rate": 0.008
+    "occurrence_rate": 0.008,
+    "origin_phase": "설계"
   },
   {
     "id": "I-10",
@@ -181,18 +289,30 @@
     "cost_increase_min": 0.006,
     "cost_increase_max": 0.008,
     "description": "대형 냉동기 반입 동선 미확보",
+    "source": "MDPI 고층 건물 연구 2024",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.8
+      "base_detectability": 0.60,
+      "prevention_effect": 0.35
     },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심"],
+      "purpose": ["상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-17"],
+    "is_positive": false,
     "work_type": "시공관리",
     "float_days": 7,
-    "occurrence_rate": 0.006
+    "occurrence_rate": 0.006,
+    "origin_phase": "설계"
   },
   {
     "id": "I-11",
     "name": "우기 장마로 토공사 중단",
-    "category": "시공",
+    "category": "환경",
     "severity": "S2",
     "phase": "시공",
     "delay_weeks_min": 1,
@@ -200,13 +320,25 @@
     "cost_increase_min": 0.004,
     "cost_increase_max": 0.008,
     "description": "예년보다 긴 장마로 터파기 중단",
+    "source": "기상청 데이터",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": null,
-      "base_detectability": 0.0
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": ["I-28", "I-29"],
+    "is_positive": false,
     "work_type": "토목",
     "float_days": 0,
-    "occurrence_rate": 0.003
+    "occurrence_rate": 0.003,
+    "origin_phase": "시공"
   },
   {
     "id": "I-12",
@@ -219,13 +351,25 @@
     "cost_increase_min": 0.014,
     "cost_increase_max": 0.019,
     "description": "누적 오차로 급배수 구배 부족",
+    "source": "MDPI 고층 건물 연구",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": "시공초기",
-      "base_detectability": 0.75
+      "base_detectability": 0.75,
+      "prevention_effect": 0.20
     },
+    "building_type_filters": {
+      "height": ["고층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
     "work_type": "구조",
     "float_days": 0,
-    "occurrence_rate": 0.004
+    "occurrence_rate": 0.004,
+    "origin_phase": "시공"
   },
   {
     "id": "I-13",
@@ -238,13 +382,25 @@
     "cost_increase_min": 0.003,
     "cost_increase_max": 0.007,
     "description": "타일 수량 20% 부족",
+    "source": "현대건설 BIM 사례",
+    "source_reliability": "A",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.85
+      "base_detectability": 0.65,
+      "prevention_effect": 0.30
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업"],
+      "scale": ["중형", "소형"]
+    },
+    "related_issues": ["I-03"],
+    "is_positive": false,
     "work_type": "마감",
     "float_days": 14,
-    "occurrence_rate": 0.012
+    "occurrence_rate": 0.012,
+    "origin_phase": "설계"
   },
   {
     "id": "I-14",
@@ -257,13 +413,25 @@
     "cost_increase_min": 0.008,
     "cost_increase_max": 0.011,
     "description": "성수기 목수 부족",
+    "source": "공동주택 공사 작업지연요소 분석",
+    "source_reliability": "A",
     "bim_effect": {
       "detection_phase": null,
-      "base_detectability": 0.0
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
     },
+    "building_type_filters": {
+      "height": ["중층", "저층"],
+      "location": ["교외"],
+      "purpose": ["주거"],
+      "scale": ["중형", "소형"]
+    },
+    "related_issues": ["I-38"],
+    "is_positive": false,
     "work_type": "시공관리",
     "float_days": 0,
-    "occurrence_rate": 0.008
+    "occurrence_rate": 0.008,
+    "origin_phase": "시공"
   },
   {
     "id": "I-15",
@@ -276,13 +444,25 @@
     "cost_increase_min": 0.014,
     "cost_increase_max": 0.022,
     "description": "기존 하수관 위치 미파악",
+    "source": "국토안전관리원 사고사례",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.7
+      "base_detectability": 0.7,
+      "prevention_effect": 0.25
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
     "work_type": "토목",
     "float_days": 0,
-    "occurrence_rate": 0.002
+    "occurrence_rate": 0.002,
+    "origin_phase": "설계"
   },
   {
     "id": "I-16",
@@ -295,13 +475,25 @@
     "cost_increase_min": 0.028,
     "cost_increase_max": 0.039,
     "description": "보온 양생 부실로 재시공",
+    "source": "국토안전관리원",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": "시공초기",
-      "base_detectability": 0.6
+      "base_detectability": 0.6,
+      "prevention_effect": 0.15
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": ["I-31"],
+    "is_positive": false,
     "work_type": "구조",
     "float_days": 0,
-    "occurrence_rate": 0.003
+    "occurrence_rate": 0.003,
+    "origin_phase": "시공"
   },
   {
     "id": "I-17",
@@ -314,13 +506,25 @@
     "cost_increase_min": 0.004,
     "cost_increase_max": 0.007,
     "description": "권상 모터 고장",
+    "source": "국토안전관리원",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": null,
-      "base_detectability": 0.0
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
     },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-10"],
+    "is_positive": false,
     "work_type": "시공관리",
     "float_days": 7,
-    "occurrence_rate": 0.005
+    "occurrence_rate": 0.005,
+    "origin_phase": "시공"
   },
   {
     "id": "I-18",
@@ -333,13 +537,25 @@
     "cost_increase_min": 0.017,
     "cost_increase_max": 0.028,
     "description": "외벽 알루미늄→석재 변경",
+    "source": "Journal of Civil Engineering 2024",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.85
+      "base_detectability": 0.65,
+      "prevention_effect": 0.10
     },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-04"],
+    "is_positive": false,
     "work_type": "계약",
     "float_days": 0,
-    "occurrence_rate": 0.004
+    "occurrence_rate": 0.004,
+    "origin_phase": "설계"
   },
   {
     "id": "I-19",
@@ -352,32 +568,56 @@
     "cost_increase_min": 0.022,
     "cost_increase_max": 0.033,
     "description": "토공 물량 30% 과소 산정",
+    "source": "MDPI 고층 건물 연구",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.9
+      "base_detectability": 0.70,
+      "prevention_effect": 0.25
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-03"],
+    "is_positive": false,
     "work_type": "계약",
     "float_days": 0,
-    "occurrence_rate": 0.003
+    "occurrence_rate": 0.003,
+    "origin_phase": "설계"
   },
   {
     "id": "I-20",
     "name": "인허가 서류 보완 요구",
     "category": "발주",
     "severity": "S2",
-    "phase": "설계",
+    "phase": "발주",
     "delay_weeks_min": 2,
     "delay_weeks_max": 3,
     "cost_increase_min": 0.006,
-    "cost_increase_max": 0.010,
+    "cost_increase_max": 0.01,
     "description": "소방 설비 보완 요구",
+    "source": "건설관리 논문",
+    "source_reliability": "A",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.75
+      "base_detectability": 0.75,
+      "prevention_effect": 0.30
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
     "work_type": "전기",
     "float_days": 7,
-    "occurrence_rate": 0.006
+    "occurrence_rate": 0.006,
+    "origin_phase": "설계"
   },
   {
     "id": "I-21",
@@ -390,13 +630,25 @@
     "cost_increase_min": 0.014,
     "cost_increase_max": 0.022,
     "description": "주요 설비 하도급사 부도",
+    "source": "MDPI 고층 건물 연구",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": null,
-      "base_detectability": 0.0
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["중형", "소형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
     "work_type": "설비",
     "float_days": 0,
-    "occurrence_rate": 0.002
+    "occurrence_rate": 0.002,
+    "origin_phase": "시공"
   },
   {
     "id": "I-22",
@@ -409,13 +661,25 @@
     "cost_increase_min": 0.008,
     "cost_increase_max": 0.017,
     "description": "유럽산 커튼월 제조사 파업",
+    "source": "Journal of Civil Engineering 2024",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": "발주",
-      "base_detectability": 0.6
+      "base_detectability": 0.6,
+      "prevention_effect": 0.10
     },
+    "building_type_filters": {
+      "height": ["고층"],
+      "location": ["도심", "교외"],
+      "purpose": ["상업", "공공"],
+      "scale": ["대형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
     "work_type": "자재",
     "float_days": 14,
-    "occurrence_rate": 0.005
+    "occurrence_rate": 0.005,
+    "origin_phase": "발주"
   },
   {
     "id": "I-23",
@@ -428,13 +692,25 @@
     "cost_increase_min": 0.011,
     "cost_increase_max": 0.019,
     "description": "국제 철강 가격 40% 상승",
+    "source": "Journal of Civil Engineering 2024",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": null,
-      "base_detectability": 0.0
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
     "work_type": "자재",
     "float_days": 0,
-    "occurrence_rate": 0.004
+    "occurrence_rate": 0.004,
+    "origin_phase": "시공"
   },
   {
     "id": "I-24",
@@ -447,13 +723,25 @@
     "cost_increase_min": 0.014,
     "cost_increase_max": 0.022,
     "description": "특수 엘리베이터 제작 지연",
+    "source": "Journal of Civil Engineering 2024",
+    "source_reliability": "S",
     "bim_effect": {
-      "detection_phase": "설계",
-      "base_detectability": 0.7
+      "detection_phase": "발주",
+      "base_detectability": 0.7,
+      "prevention_effect": 0.15
     },
+    "building_type_filters": {
+      "height": ["고층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
     "work_type": "자재",
     "float_days": 7,
-    "occurrence_rate": 0.006
+    "occurrence_rate": 0.006,
+    "origin_phase": "발주"
   },
   {
     "id": "I-25",
@@ -463,16 +751,28 @@
     "phase": "시공",
     "delay_weeks_min": 2,
     "delay_weeks_max": 3,
-    "cost_increase_min": 0.010,
+    "cost_increase_min": 0.01,
     "cost_increase_max": 0.014,
     "description": "외벽 타일 색상 불량률 30%",
+    "source": "한국건설관리학회",
+    "source_reliability": "A",
     "bim_effect": {
       "detection_phase": "설계",
-      "base_detectability": 0.65
+      "base_detectability": 0.65,
+      "prevention_effect": 0.20
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업"],
+      "scale": ["중형", "소형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
     "work_type": "마감",
     "float_days": 14,
-    "occurrence_rate": 0.008
+    "occurrence_rate": 0.008,
+    "origin_phase": "설계"
   },
   {
     "id": "I-26",
@@ -485,13 +785,25 @@
     "cost_increase_min": 0.008,
     "cost_increase_max": 0.014,
     "description": "방수 시공 부실 지적",
+    "source": "국토안전관리원",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": "시공초기",
-      "base_detectability": 0.7
+      "base_detectability": 0.7,
+      "prevention_effect": 0.25
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
     "work_type": "마감",
     "float_days": 7,
-    "occurrence_rate": 0.01
+    "occurrence_rate": 0.01,
+    "origin_phase": "시공"
   },
   {
     "id": "I-27",
@@ -504,12 +816,985 @@
     "cost_increase_min": 0.006,
     "cost_increase_max": 0.011,
     "description": "소방 설비 누락 발견",
+    "source": "국토안전관리원",
+    "source_reliability": "S",
     "bim_effect": {
       "detection_phase": "시공후기",
-      "base_detectability": 0.8
+      "base_detectability": 0.60,
+      "prevention_effect": 0.30
     },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": ["I-20"],
+    "is_positive": false,
     "work_type": "마감",
     "float_days": 14,
-    "occurrence_rate": 0.012
+    "occurrence_rate": 0.012,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-28",
+    "name": "태풍으로 현장 작업 중단",
+    "category": "환경",
+    "severity": "S3",
+    "phase": "시공",
+    "delay_weeks_min": 1,
+    "delay_weeks_max": 2,
+    "cost_increase_min": 0.005,
+    "cost_increase_max": 0.012,
+    "description": "태풍 경보로 크레인 및 외부 작업 전면 중단",
+    "source": "기상청 데이터",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": null,
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-11"],
+    "is_positive": false,
+    "work_type": "시공관리",
+    "float_days": 0,
+    "occurrence_rate": 0.002,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-29",
+    "name": "폭설로 자재 운반 지연",
+    "category": "환경",
+    "severity": "S2",
+    "phase": "시공",
+    "delay_weeks_min": 1,
+    "delay_weeks_max": 2,
+    "cost_increase_min": 0.003,
+    "cost_increase_max": 0.007,
+    "description": "폭설로 도로 통제, 레미콘 납품 중단",
+    "source": "기상청 데이터",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": null,
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": ["I-11"],
+    "is_positive": false,
+    "work_type": "토목",
+    "float_days": 7,
+    "occurrence_rate": 0.003,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-30",
+    "name": "폭염으로 콘크리트 타설 제한",
+    "category": "환경",
+    "severity": "S2",
+    "phase": "시공",
+    "delay_weeks_min": 1,
+    "delay_weeks_max": 2,
+    "cost_increase_min": 0.004,
+    "cost_increase_max": 0.008,
+    "description": "일 최고 기온 35도 이상, 타설 시간 제한 및 양생 관리 강화",
+    "source": "기상청 데이터",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": null,
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
+    "work_type": "구조",
+    "float_days": 7,
+    "occurrence_rate": 0.004,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-31",
+    "name": "동절기 동파 방지 작업",
+    "category": "환경",
+    "severity": "S1",
+    "phase": "시공",
+    "delay_weeks_min": 0,
+    "delay_weeks_max": 1,
+    "cost_increase_min": 0.003,
+    "cost_increase_max": 0.006,
+    "description": "영하 10도 이하, 배관 동파 방지 조치 및 작업 시간 단축",
+    "source": "기상청 데이터",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": null,
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": ["I-16"],
+    "is_positive": false,
+    "work_type": "설비",
+    "float_days": 14,
+    "occurrence_rate": 0.005,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-32",
+    "name": "황사/미세먼지로 외부 작업 중단",
+    "category": "환경",
+    "severity": "S1",
+    "phase": "시공",
+    "delay_weeks_min": 0,
+    "delay_weeks_max": 1,
+    "cost_increase_min": 0.002,
+    "cost_increase_max": 0.004,
+    "description": "미세먼지 농도 '매우 나쁨', 외부 도장 및 마감 작업 중단",
+    "source": "환경부 데이터",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": null,
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
+    "work_type": "마감",
+    "float_days": 14,
+    "occurrence_rate": 0.006,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-33",
+    "name": "소음 민원으로 작업 시간 제한",
+    "category": "민원",
+    "severity": "S2",
+    "phase": "시공",
+    "delay_weeks_min": 2,
+    "delay_weeks_max": 4,
+    "cost_increase_min": 0.008,
+    "cost_increase_max": 0.015,
+    "description": "인근 주민 소음 민원으로 야간 및 주말 작업 금지, 작업 시간 50% 감소",
+    "source": "환경부 환경분쟁 통계 (85% 소음진동)",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.0,
+      "prevention_effect": 0.15
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심"],
+      "purpose": ["주거", "상업"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": ["I-34", "I-36"],
+    "is_positive": false,
+    "work_type": "시공관리",
+    "float_days": 0,
+    "occurrence_rate": 0.015,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-34",
+    "name": "진동 민원으로 공법 변경",
+    "category": "민원",
+    "severity": "S3",
+    "phase": "시공",
+    "delay_weeks_min": 3,
+    "delay_weeks_max": 5,
+    "cost_increase_min": 0.012,
+    "cost_increase_max": 0.022,
+    "description": "항타 공법→저소음 공법으로 변경, 공기 지연 및 비용 증가",
+    "source": "환경부 환경분쟁 통계",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.0,
+      "prevention_effect": 0.20
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-33"],
+    "is_positive": false,
+    "work_type": "토목",
+    "float_days": 0,
+    "occurrence_rate": 0.008,
+    "origin_phase": "설계"
+  },
+  {
+    "id": "I-35",
+    "name": "먼지 민원으로 방진막 추가 설치",
+    "category": "민원",
+    "severity": "S1",
+    "phase": "시공",
+    "delay_weeks_min": 1,
+    "delay_weeks_max": 1,
+    "cost_increase_min": 0.004,
+    "cost_increase_max": 0.007,
+    "description": "인근 상가 먼지 민원, 방진막 설치 및 살수 차량 운영",
+    "source": "환경부 데이터",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": null,
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심"],
+      "purpose": ["주거", "상업"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
+    "work_type": "시공관리",
+    "float_days": 7,
+    "occurrence_rate": 0.010,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-36",
+    "name": "주민 반대로 야간 작업 금지",
+    "category": "민원",
+    "severity": "S2",
+    "phase": "시공",
+    "delay_weeks_min": 2,
+    "delay_weeks_max": 3,
+    "cost_increase_min": 0.006,
+    "cost_increase_max": 0.011,
+    "description": "주민 동의 없이 야간 작업 불가, 공기 지연",
+    "source": "환경부 환경분쟁 통계",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": null,
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심"],
+      "purpose": ["주거"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": ["I-33"],
+    "is_positive": false,
+    "work_type": "시공관리",
+    "float_days": 0,
+    "occurrence_rate": 0.012,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-37",
+    "name": "주차 문제로 자재 반입 지연",
+    "category": "민원",
+    "severity": "S2",
+    "phase": "시공",
+    "delay_weeks_min": 1,
+    "delay_weeks_max": 2,
+    "cost_increase_min": 0.005,
+    "cost_increase_max": 0.009,
+    "description": "주민 주차 공간 부족, 자재 반입 시간 제한 및 동선 협소",
+    "source": "서울시 소음진동민원 현황",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.0,
+      "prevention_effect": 0.25
+    },
+    "building_type_filters": {
+      "height": ["중층", "저층"],
+      "location": ["도심"],
+      "purpose": ["주거", "상업"],
+      "scale": ["중형", "소형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
+    "work_type": "시공관리",
+    "float_days": 7,
+    "occurrence_rate": 0.009,
+    "origin_phase": "설계"
+  },
+  {
+    "id": "I-38",
+    "name": "전문 기술자 능력 부족",
+    "category": "시공",
+    "severity": "S2",
+    "phase": "시공",
+    "delay_weeks_min": 2,
+    "delay_weeks_max": 3,
+    "cost_increase_min": 0.007,
+    "cost_increase_max": 0.012,
+    "description": "전기설비 기술자 숙련도 부족으로 재작업 및 품질 저하",
+    "source": "공동주택 공사 작업지연요소 분석 (전기설비 주요 원인)",
+    "source_reliability": "A",
+    "bim_effect": {
+      "detection_phase": null,
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["중형", "소형"]
+    },
+    "related_issues": ["I-14"],
+    "is_positive": false,
+    "work_type": "전기",
+    "float_days": 7,
+    "occurrence_rate": 0.011,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-39",
+    "name": "선행 작업 미완료로 후속 작업 대기",
+    "category": "시공",
+    "severity": "S2",
+    "phase": "시공",
+    "delay_weeks_min": 1,
+    "delay_weeks_max": 3,
+    "cost_increase_min": 0.005,
+    "cost_increase_max": 0.010,
+    "description": "기계설비 설치 전 구조 작업 미완료, 연쇄 지연 발생",
+    "source": "공동주택 공사 작업지연요소 분석 (기계설비 주요 원인)",
+    "source_reliability": "A",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.50,
+      "prevention_effect": 0.40
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
+    "work_type": "설비",
+    "float_days": 0,
+    "occurrence_rate": 0.013,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-40",
+    "name": "추락 사고로 현장 중단",
+    "category": "안전",
+    "severity": "S4",
+    "phase": "시공",
+    "delay_weeks_min": 2,
+    "delay_weeks_max": 4,
+    "cost_increase_min": 0.015,
+    "cost_increase_max": 0.030,
+    "description": "고소 작업 중 추락 사고 발생, 현장 작업 중단 및 안전 조사",
+    "source": "국토안전관리원 (추락 사고 50%)",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.0,
+      "prevention_effect": 0.10
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
+    "work_type": "시공관리",
+    "float_days": 0,
+    "occurrence_rate": 0.002,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-41",
+    "name": "협착(압착) 사고",
+    "category": "안전",
+    "severity": "S4",
+    "phase": "시공",
+    "delay_weeks_min": 1,
+    "delay_weeks_max": 3,
+    "cost_increase_min": 0.010,
+    "cost_increase_max": 0.025,
+    "description": "중장비 작업 중 협착 사고, 현장 안전 점검 및 작업 재개 지연",
+    "source": "국토안전관리원 (협착 사고 19%)",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.0,
+      "prevention_effect": 0.15
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
+    "work_type": "시공관리",
+    "float_days": 0,
+    "occurrence_rate": 0.001,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-42",
+    "name": "화재 사고로 복구 작업",
+    "category": "안전",
+    "severity": "S4",
+    "phase": "시공",
+    "delay_weeks_min": 3,
+    "delay_weeks_max": 6,
+    "cost_increase_min": 0.020,
+    "cost_increase_max": 0.045,
+    "description": "용접 작업 중 화재 발생, 소방 조사 및 피해 복구",
+    "source": "국토안전관리원",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": null,
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": [],
+    "is_positive": false,
+    "work_type": "시공관리",
+    "float_days": 0,
+    "occurrence_rate": 0.001,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-43",
+    "name": "장비 전도 사고",
+    "category": "안전",
+    "severity": "S3",
+    "phase": "시공",
+    "delay_weeks_min": 2,
+    "delay_weeks_max": 3,
+    "cost_increase_min": 0.012,
+    "cost_increase_max": 0.020,
+    "description": "크레인 전도 사고, 장비 교체 및 안전 재점검",
+    "source": "국토안전관리원",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.0,
+      "prevention_effect": 0.20
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-17"],
+    "is_positive": false,
+    "work_type": "시공관리",
+    "float_days": 0,
+    "occurrence_rate": 0.001,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-44",
+    "name": "인근 건물 균열 보상 요구",
+    "category": "민원",
+    "severity": "S3",
+    "phase": "시공",
+    "delay_weeks_min": 3,
+    "delay_weeks_max": 6,
+    "cost_increase_min": 0.015,
+    "cost_increase_max": 0.035,
+    "description": "발파 및 항타 작업으로 인근 건물 균열 발생, 보상 협의 및 공법 변경",
+    "source": "환경부 환경분쟁 통계",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.0,
+      "prevention_effect": 0.30
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-34"],
+    "is_positive": false,
+    "work_type": "토목",
+    "float_days": 0,
+    "occurrence_rate": 0.003,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-45",
+    "name": "건설사 재정 악화",
+    "category": "발주",
+    "severity": "S4",
+    "phase": "시공",
+    "delay_weeks_min": 4,
+    "delay_weeks_max": 8,
+    "cost_increase_min": 0.025,
+    "cost_increase_max": 0.050,
+    "description": "시공사 유동성 위기로 공사 중단 및 재개 지연",
+    "source": "MDPI 고층 건물 연구 (최고 가중치 요인)",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": null,
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["중형", "소형"]
+    },
+    "related_issues": ["I-21", "I-46"],
+    "is_positive": false,
+    "work_type": "계약",
+    "float_days": 0,
+    "occurrence_rate": 0.001,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-46",
+    "name": "금융/신용자원 할당 지연",
+    "category": "발주",
+    "severity": "S3",
+    "phase": "발주",
+    "delay_weeks_min": 3,
+    "delay_weeks_max": 5,
+    "cost_increase_min": 0.018,
+    "cost_increase_max": 0.030,
+    "description": "대출 승인 지연으로 공사 착수 및 자재 발주 지연",
+    "source": "MDPI 고층 건물 연구 (상위 요인)",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": null,
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-45"],
+    "is_positive": false,
+    "work_type": "계약",
+    "float_days": 0,
+    "occurrence_rate": 0.002,
+    "origin_phase": "발주"
+  },
+  {
+    "id": "I-47",
+    "name": "프로젝트 자원 할당 부족",
+    "category": "발주",
+    "severity": "S3",
+    "phase": "시공",
+    "delay_weeks_min": 2,
+    "delay_weeks_max": 4,
+    "cost_increase_min": 0.012,
+    "cost_increase_max": 0.025,
+    "description": "여러 프로젝트 동시 진행으로 장비 및 인력 배정 부족",
+    "source": "MDPI 고층 건물 연구",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": null,
+      "base_detectability": 0.0,
+      "prevention_effect": 0.0
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-14"],
+    "is_positive": false,
+    "work_type": "시공관리",
+    "float_days": 0,
+    "occurrence_rate": 0.004,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "I-48",
+    "name": "법규 미준수로 시정 명령",
+    "category": "발주",
+    "severity": "S2",
+    "phase": "시공",
+    "delay_weeks_min": 2,
+    "delay_weeks_max": 3,
+    "cost_increase_min": 0.008,
+    "cost_increase_max": 0.015,
+    "description": "건축법규 위반 적발, 시정 명령 및 재시공",
+    "source": "건설관리 논문",
+    "source_reliability": "A",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.70,
+      "prevention_effect": 0.35
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": ["I-20"],
+    "is_positive": false,
+    "work_type": "시공관리",
+    "float_days": 0,
+    "occurrence_rate": 0.005,
+    "origin_phase": "설계"
+  },
+  {
+    "id": "P-01",
+    "name": "BIM 기반 사전 간섭 제거",
+    "category": "긍정",
+    "severity": "P2",
+    "phase": "설계",
+    "delay_weeks_min": -2,
+    "delay_weeks_max": -4,
+    "cost_increase_min": -0.010,
+    "cost_increase_max": -0.020,
+    "description": "BIM 3D 모델링으로 설계 단계에서 간섭 사전 제거, 재작업 최소화",
+    "source": "현대건설 BIM 사례 (두산베어스파크 공기 12% 절감)",
+    "source_reliability": "A",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.90,
+      "prevention_effect": 0.50
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-01", "I-09"],
+    "is_positive": true,
+    "work_type": "설계",
+    "float_days": 0,
+    "occurrence_rate": 0.60,
+    "origin_phase": "설계"
+  },
+  {
+    "id": "P-02",
+    "name": "모듈러 공법 적용",
+    "category": "긍정",
+    "severity": "P3",
+    "phase": "시공",
+    "delay_weeks_min": -8,
+    "delay_weeks_max": -16,
+    "cost_increase_min": -0.015,
+    "cost_increase_max": -0.030,
+    "description": "모듈러 공법으로 공장 제작 + 현장 조립, 공기 20-50% 단축",
+    "source": "McKinsey 보고서 (공기 20-50% 단축)",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.95,
+      "prevention_effect": 0.60
+    },
+    "building_type_filters": {
+      "height": ["중층", "저층"],
+      "location": ["교외"],
+      "purpose": ["주거"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": [],
+    "is_positive": true,
+    "work_type": "구조",
+    "float_days": 0,
+    "occurrence_rate": 0.15,
+    "origin_phase": "설계"
+  },
+  {
+    "id": "P-03",
+    "name": "프리팹 공법 부분 적용",
+    "category": "긍정",
+    "severity": "P2",
+    "phase": "시공",
+    "delay_weeks_min": -3,
+    "delay_weeks_max": -6,
+    "cost_increase_min": -0.008,
+    "cost_increase_max": -0.015,
+    "description": "화장실, 계단 등 반복 요소 프리팹 적용, 공기 10-20% 단축",
+    "source": "McKinsey 보고서 (60% GC가 5% 이상 개선)",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.85,
+      "prevention_effect": 0.40
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": [],
+    "is_positive": true,
+    "work_type": "구조",
+    "float_days": 0,
+    "occurrence_rate": 0.30,
+    "origin_phase": "설계"
+  },
+  {
+    "id": "P-04",
+    "name": "BIM 4D 시뮬레이션 공정 최적화",
+    "category": "긍정",
+    "severity": "P2",
+    "phase": "설계",
+    "delay_weeks_min": -2,
+    "delay_weeks_max": -3,
+    "cost_increase_min": -0.005,
+    "cost_increase_max": -0.012,
+    "description": "4D BIM으로 공정 시뮬레이션 및 최적화, 유휴 시간 최소화",
+    "source": "현대건설 BIM 사례 (쿠웨이트 교량 공기 1.5년 단축)",
+    "source_reliability": "A",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.80,
+      "prevention_effect": 0.45
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-39"],
+    "is_positive": true,
+    "work_type": "시공관리",
+    "float_days": 0,
+    "occurrence_rate": 0.40,
+    "origin_phase": "설계"
+  },
+  {
+    "id": "P-05",
+    "name": "BIM 기반 자재 최적화",
+    "category": "긍정",
+    "severity": "P1",
+    "phase": "설계",
+    "delay_weeks_min": -1,
+    "delay_weeks_max": -2,
+    "cost_increase_min": -0.008,
+    "cost_increase_max": -0.015,
+    "description": "BIM 물량 자동 산출로 자재 최적화, 과다 발주 방지 및 비용 절감",
+    "source": "현대건설 BIM 사례 (Camino Medical 비용 9% 절감)",
+    "source_reliability": "A",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.85,
+      "prevention_effect": 0.50
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형", "소형"]
+    },
+    "related_issues": ["I-03", "I-13"],
+    "is_positive": true,
+    "work_type": "설계",
+    "float_days": 0,
+    "occurrence_rate": 0.50,
+    "origin_phase": "설계"
+  },
+  {
+    "id": "P-06",
+    "name": "BIM 협업으로 RFI 감소",
+    "category": "긍정",
+    "severity": "P2",
+    "phase": "설계",
+    "delay_weeks_min": -2,
+    "delay_weeks_max": -3,
+    "cost_increase_min": -0.006,
+    "cost_increase_max": -0.011,
+    "description": "BIM 클라우드 협업으로 설계 정보 공유 강화, RFI 30-40% 감소",
+    "source": "현대건설 BIM 360 적용 사례",
+    "source_reliability": "A",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.75,
+      "prevention_effect": 0.40
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-06"],
+    "is_positive": true,
+    "work_type": "설계",
+    "float_days": 0,
+    "occurrence_rate": 0.45,
+    "origin_phase": "설계"
+  },
+  {
+    "id": "P-07",
+    "name": "디지털 트윈 현장 관리",
+    "category": "긍정",
+    "severity": "P2",
+    "phase": "시공",
+    "delay_weeks_min": -1,
+    "delay_weeks_max": -3,
+    "cost_increase_min": -0.005,
+    "cost_increase_max": -0.010,
+    "description": "드론 + 디지털 트윈으로 진도 관리 및 품질 검증 효율화",
+    "source": "삼성물산 디지털 트윈 적용 사례",
+    "source_reliability": "A",
+    "bim_effect": {
+      "detection_phase": "시공초기",
+      "base_detectability": 0.80,
+      "prevention_effect": 0.35
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형"]
+    },
+    "related_issues": [],
+    "is_positive": true,
+    "work_type": "시공관리",
+    "float_days": 0,
+    "occurrence_rate": 0.25,
+    "origin_phase": "시공"
+  },
+  {
+    "id": "P-08",
+    "name": "BIM 기반 조기 설계 오류 발견",
+    "category": "긍정",
+    "severity": "P2",
+    "phase": "설계",
+    "delay_weeks_min": -2,
+    "delay_weeks_max": -4,
+    "cost_increase_min": -0.012,
+    "cost_increase_max": -0.025,
+    "description": "BIM 설계 검증으로 도면 오류 조기 발견, 재작업 30% 감소",
+    "source": "Journal of Civil Engineering 2024 (설계오류 30% 감소)",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.85,
+      "prevention_effect": 0.50
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-02", "I-04", "I-05"],
+    "is_positive": true,
+    "work_type": "설계",
+    "float_days": 0,
+    "occurrence_rate": 0.55,
+    "origin_phase": "설계"
+  },
+  {
+    "id": "P-09",
+    "name": "양중 계획 BIM 시뮬레이션",
+    "category": "긍정",
+    "severity": "P1",
+    "phase": "설계",
+    "delay_weeks_min": -1,
+    "delay_weeks_max": -2,
+    "cost_increase_min": -0.004,
+    "cost_increase_max": -0.008,
+    "description": "BIM 3D 모델로 양중 계획 사전 검증, 반입 동선 최적화",
+    "source": "MDPI 고층 건물 연구",
+    "source_reliability": "S",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.75,
+      "prevention_effect": 0.40
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층"],
+      "location": ["도심"],
+      "purpose": ["상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-10"],
+    "is_positive": true,
+    "work_type": "시공관리",
+    "float_days": 0,
+    "occurrence_rate": 0.35,
+    "origin_phase": "설계"
+  },
+  {
+    "id": "P-10",
+    "name": "BIM 기반 인허가 승인 신속화",
+    "category": "긍정",
+    "severity": "P1",
+    "phase": "발주",
+    "delay_weeks_min": -1,
+    "delay_weeks_max": -2,
+    "cost_increase_min": -0.003,
+    "cost_increase_max": -0.007,
+    "description": "BIM 모델 제출로 인허가 심사 기간 단축, 보완 요구 감소",
+    "source": "건설관리 논문",
+    "source_reliability": "A",
+    "bim_effect": {
+      "detection_phase": "설계",
+      "base_detectability": 0.80,
+      "prevention_effect": 0.35
+    },
+    "building_type_filters": {
+      "height": ["고층", "중층", "저층"],
+      "location": ["도심", "교외"],
+      "purpose": ["주거", "상업", "공공"],
+      "scale": ["대형", "중형"]
+    },
+    "related_issues": ["I-20"],
+    "is_positive": true,
+    "work_type": "계약",
+    "float_days": 0,
+    "occurrence_rate": 0.40,
+    "origin_phase": "발주"
   }
 ]

@@ -34,7 +34,11 @@ class ProjectConfig:
     
     # 간접비
     DAILY_INDIRECT_COST_RATIO = 0.001  # 일 0.1%
-    
+
+    # 지체상금 비율 (국내 계약법 기준)
+    # 국가계약법 시행규칙 기준: 공사계약 0.05%/일
+    PENALTY_RATE_PER_DAY = 0.0005  # 0.05%/일 (계약금액 대비)
+
     # 지연별 금리 인상 (basis point)
     DELAY_RATE_INCREASE = {
         0: 0,      # 1개월 이하

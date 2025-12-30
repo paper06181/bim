@@ -141,7 +141,7 @@ class GraphVisualizer:
     def plot_roi_analysis(self, metrics_off, metrics_on, bim_cost=50_000_000, save_path=None):
         """BIM 투자 ROI 분석 그래프"""
         fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
-        fig.suptitle('BIM 투자 ROI 분석', fontsize=16, fontweight='bold')
+        fig.suptitle('BIM 투자 ROI 분석', fontsize=16, fontweight='bold', fontproperties=self.font_prop)
 
         # 1. 비용 분석
         cost_saved = metrics_off['cost_increase'] - metrics_on['cost_increase']
@@ -157,15 +157,18 @@ class GraphVisualizer:
         colors_bar = ['#ff6b6b', '#51cf66', '#ffd43b', '#339af0']
 
         bars = ax1.bar(categories, values, color=colors_bar, alpha=0.7, edgecolor='black')
-        ax1.set_ylabel('금액 (억원)', fontsize=12)
-        ax1.set_title('비용 분석', fontsize=13, fontweight='bold')
+        ax1.set_ylabel('금액 (억원)', fontsize=12, fontproperties=self.font_prop)
+        ax1.set_title('비용 분석', fontsize=13, fontweight='bold', fontproperties=self.font_prop)
         ax1.grid(axis='y', alpha=0.3)
+        # x축 레이블에 폰트 적용
+        for label in ax1.get_xticklabels():
+            label.set_fontproperties(self.font_prop)
 
         for bar in bars:
             height = bar.get_height()
             ax1.text(bar.get_x() + bar.get_width()/2., height,
                     f'{height:.2f}억',
-                    ha='center', va='bottom', fontsize=10, fontweight='bold')
+                    ha='center', va='bottom', fontsize=10, fontweight='bold', fontproperties=self.font_prop)
 
         # 2. ROI 원형 그래프
         if roi > 0:
@@ -179,13 +182,13 @@ class GraphVisualizer:
                    autopct='%1.0f%%',
                    explode=explode,
                    startangle=90,
-                   textprops={'fontsize': 12, 'fontweight': 'bold'})
-            ax2.set_title(f'투자 수익률 (ROI: {roi:.1f}%)', fontsize=13, fontweight='bold')
+                   textprops={'fontsize': 12, 'fontweight': 'bold', 'fontproperties': self.font_prop})
+            ax2.set_title(f'투자 수익률 (ROI: {roi:.1f}%)', fontsize=13, fontweight='bold', fontproperties=self.font_prop)
         else:
             ax2.text(0.5, 0.5, f'ROI: {roi:.1f}%\n(손실)',
                     ha='center', va='center', fontsize=20, fontweight='bold', color='red',
-                    transform=ax2.transAxes)
-            ax2.set_title('투자 수익률', fontsize=13, fontweight='bold')
+                    transform=ax2.transAxes, fontproperties=self.font_prop)
+            ax2.set_title('투자 수익률', fontsize=13, fontweight='bold', fontproperties=self.font_prop)
             ax2.axis('off')
 
         plt.tight_layout()
@@ -218,9 +221,9 @@ class GraphVisualizer:
         bars = ax.barh(y_pos, durations, color=colors, alpha=0.7, edgecolor='black', height=0.6)
 
         ax.set_yticks(y_pos)
-        ax.set_yticklabels(labels, fontsize=12)
-        ax.set_xlabel('공사 기간 (일)', fontsize=12)
-        ax.set_title('공사 기간 비교', fontsize=14, fontweight='bold')
+        ax.set_yticklabels(labels, fontsize=12, fontproperties=self.font_prop)
+        ax.set_xlabel('공사 기간 (일)', fontsize=12, fontproperties=self.font_prop)
+        ax.set_title('공사 기간 비교', fontsize=14, fontweight='bold', fontproperties=self.font_prop)
         ax.grid(axis='x', alpha=0.3)
 
         # 값 표시
@@ -229,16 +232,19 @@ class GraphVisualizer:
             ax.text(width, bar.get_y() + bar.get_height()/2.,
                    f'{duration:.0f}일',
                    ha='left', va='center', fontsize=11, fontweight='bold',
-                   bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.8))
+                   bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.8),
+                   fontproperties=self.font_prop)
 
         # 계획 대비 지연 표시
         delay_off = actual_off - planned
         delay_on = actual_on - planned
 
         ax.text(planned + delay_off/2, 1, f'+{delay_off:.0f}일\n({metrics_off["delay_weeks"]:.1f}주)',
-               ha='center', va='center', fontsize=10, color='darkred', fontweight='bold')
+               ha='center', va='center', fontsize=10, color='darkred', fontweight='bold',
+               fontproperties=self.font_prop)
         ax.text(planned + delay_on/2, 2, f'+{delay_on:.0f}일\n({metrics_on["delay_weeks"]:.1f}주)',
-               ha='center', va='center', fontsize=10, color='darkgreen', fontweight='bold')
+               ha='center', va='center', fontsize=10, color='darkgreen', fontweight='bold',
+               fontproperties=self.font_prop)
 
         plt.tight_layout()
 
@@ -256,7 +262,7 @@ class GraphVisualizer:
     def plot_issue_breakdown(self, metrics_off, metrics_on, save_path=None):
         """이슈 발생/탐지 분석"""
         fig, axes = plt.subplots(1, 2, figsize=(14, 6))
-        fig.suptitle('이슈 발생 및 탐지 분석', fontsize=16, fontweight='bold')
+        fig.suptitle('이슈 발생 및 탐지 분석', fontsize=16, fontweight='bold', fontproperties=self.font_prop)
 
         # 1. BIM OFF 이슈 분석
         ax1 = axes[0]

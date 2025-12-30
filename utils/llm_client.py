@@ -26,8 +26,8 @@ class LLMClient:
 
         self.api_key = os.getenv('OPENAI_API_KEY')
         self.model = os.getenv('OPENAI_MODEL', 'gpt-4o-mini')
-        self.temperature = float(os.getenv('LLM_TEMPERATURE', '0.7'))
-        self.max_tokens = int(os.getenv('LLM_MAX_TOKENS', '500'))
+        self.temperature = float(os.getenv('LLM_TEMPERATURE', '0.3'))  # 더 일관된 응답
+        self.max_tokens = int(os.getenv('LLM_MAX_TOKENS', '2000'))  # 더 긴 응답 허용
 
         if not self.api_key:
             raise ValueError(

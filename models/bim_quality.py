@@ -14,12 +14,12 @@ class BIMQuality:
         normalized = {}
         
         if bim_quality['warning_density'] is not None:
-            normalized['WD'] = max(0, min(1, 1 - bim_quality['warning_density'] / 2.0))
+            normalized['WD'] = max(0, min(1, 1 - bim_quality['warning_density'] / 20.0))
         else:
             normalized['WD'] = 0
-        
+
         if bim_quality['clash_density'] is not None:
-            normalized['CD'] = max(0, min(1, 1 - bim_quality['clash_density'] / 1.0))
+            normalized['CD'] = max(0, min(1, 1 - bim_quality['clash_density'] / 50.0))
         else:
             normalized['CD'] = 0
         

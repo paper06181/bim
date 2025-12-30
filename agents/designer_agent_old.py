@@ -43,7 +43,7 @@ class DesignerAgent(BaseAgent):
             else:
                 return f"[설계사] BIM 데이터를 기반으로 {issue['name']} 문제의 해결 방안을 제시하겠습니다."
         
-        delay = impact_result['delay_weeks']
+        delay = impact_result['delay_weeks'] 
         cost = impact_result['cost_increase'] * 100
         
         return f"[설계사] {issue['name']} 문제로 약 {delay:.1f}주 지연, {cost:.1f}% 비용 증가가 예상됩니다. 설계 변경안을 작성하겠습니다."

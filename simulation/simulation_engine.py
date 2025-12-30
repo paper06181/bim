@@ -115,7 +115,7 @@ class SimulationEngine:
         print(f"지연: {impact_result['delay_weeks']:.2f}주")
         print(f"비용 증가: {impact_result['cost_increase']*100:.2f}%")
         print(f"탐지 여부: {'예' if impact_result['detected'] else '아니오'}")
-        
+
         if impact_result['detected']:
             print(f"탐지 단계: {impact_result['detection_phase']}")
             print(f"BIM 효과성: {impact_result['bim_effectiveness']:.2f}")
@@ -123,13 +123,17 @@ class SimulationEngine:
                 print(f"절감 효과:")
                 print(f"  - 지연 회피: {impact_result['savings']['delay_avoided']:.2f}주")
                 print(f"  - 비용 회피: {impact_result['savings']['cost_avoided']*100:.2f}%")
-        
+
         if impact_result.get('financial_cost'):
             fc = impact_result['financial_cost']
             if fc['rate_increase_bp'] > 0:
                 print(f"금리 인상: +{fc['rate_increase_bp']}bp → {fc['new_interest_rate']*100:.2f}%")
-            print(f"금융 비용: {fc['total_financial_cost']:,.0f}원")
-        
+            print(f"금융 비용 세부:")
+            print(f"  - 추가 이자: {fc.get('interest_increase', 0):,.0f}원")
+            print(f"  - 간접비: {fc.get('indirect_cost', 0):,.0f}원")
+            print(f"  - 지체상금: {fc.get('penalty_amount', 0):,.0f}원")
+            print(f"  - 총액: {fc['total_financial_cost']:,.0f}원")
+
         print(f"--- 영향 요약 끝 ---\n")
     
     def _periodic_review(self):
@@ -202,7 +206,10 @@ class SimulationEngine:
                 fc = impact['financial_cost']
                 content.append(f"  - 금리 인상: +{fc['rate_increase_bp']}bp")
                 content.append(f"  - 신규 금리: {fc['new_interest_rate']*100:.2f}%")
-                content.append(f"  - 금융 비용: {fc['total_financial_cost']:,.0f}원")
+                content.append(f"  - 추가 이자: {fc.get('interest_increase', 0):,.0f}원")
+                content.append(f"  - 간접비: {fc.get('indirect_cost', 0):,.0f}원")
+                content.append(f"  - 지체상금: {fc.get('penalty_amount', 0):,.0f}원")
+                content.append(f"  - 총 금융비용: {fc['total_financial_cost']:,.0f}원")
 
             # 협상 결과 추가
             if impact.get('negotiation_summary'):
