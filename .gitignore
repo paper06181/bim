@@ -1,31 +1,20 @@
-# Claude AI
-.claude/
-
 # Python virtual environment
 .venv/
-venv/
-env/
-
-# Documentation folder
-md/
-
-
-# Environment variables (sensitive data)
-.env
-.env.local
-.env.*.local
-
-
-# Python cache
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
+*.pyc
+*.pyo
+*.pyd
+.Python
 
-# VSCode
+# Environment variables
+.env
+
+# IDE
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-# Test files
-test_*.py
-
-
+# Claude AI
+.claude/

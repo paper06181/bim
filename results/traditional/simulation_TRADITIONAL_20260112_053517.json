@@ -1,0 +1,3057 @@
+{
+  "summary": {
+    "프로젝트정보": {
+      "기본정보": {
+        "위치": "도심",
+        "용적율": "80%",
+        "연면적": "5,000㎡",
+        "총공사비": "50.0억원",
+        "계획공기": "18개월",
+        "목표공기": "486일",
+        "용도": "상업",
+        "공법": "TRADITIONAL"
+      },
+      "케이스정보": {
+        "케이스번호": 3,
+        "KPI": {
+          "RR": 0.18,
+          "SR": 1.8,
+          "CR": 9,
+          "FC": 1.8
+        }
+      },
+      "비용정보": {
+        "일일금융비용": "54.8만원",
+        "일일자재비": "411.5만원",
+        "일일인건비": "308.6만원"
+      },
+      "위험계수": {
+        "도심밀집도": 1.3,
+        "규모계수": "1.16",
+        "복잡도계수": 1.2
+      }
+    },
+    "시뮬레이션결과": {
+      "목표공기": "486일",
+      "실제소요": "663일",
+      "누적지연": "177.1일",
+      "누적비용증가": "6.32%",
+      "총이슈수": 11,
+      "해결완료": 11,
+      "진행중": 0
+    },
+    "이슈상세": {
+      "전체이슈수": 11,
+      "대기중": 0,
+      "해결중": 0,
+      "보류": 0,
+      "해결완료": 11,
+      "누적지연(일)": 182,
+      "누적비용증가(%)": 6.32
+    }
+  },
+  "daily_logs": [
+    {
+      "day": 0,
+      "progress_rate": 0.0,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "신규",
+          "report": "",
+          "opinions": {
+            "건축주": {
+              "concern_level": "높음",
+              "priority": "비용 최소화",
+              "opinion": "설계 변경 요청에 대해 높음 수준의 우려. 전문가 의견을 듣고 최적 방안 결정 필요.",
+              "severity_assessment": 6,
+              "budget_tolerance": "1.0%"
+            },
+            "시공사": {
+              "field_assessment": "설계 변경 요청 - 현장 조치 가능",
+              "bim_detection": "BIM 무관",
+              "severity_assessment": 6,
+              "opinion": "현장 조정 필요. 예상 소요 4주.",
+              "impact_on_schedule": "후속 공정 4주 지연 예상"
+            }
+          },
+          "severity": {
+            "agent_consensus": 3.5999999999999996,
+            "kpi_impact": -0.637,
+            "final_delay_weeks": 2.1,
+            "final_cost_increase_pct": 0.54
+          },
+          "solutions": [
+            {
+              "option_id": "SOL-C1",
+              "proposer": "시공사",
+              "description": "정상 공정대로 처리",
+              "time_weeks": 3.2,
+              "cost_increase_pct": 0.72,
+              "quality_impact": "높음",
+              "risk_level": "낮음",
+              "agent": "시공사"
+            },
+            {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 2.0,
+              "cost_increase_pct": 1.44,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            }
+          ],
+          "selected": {
+            "selected_solution": {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 2.0,
+              "cost_increase_pct": 1.44,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            },
+            "reasoning": "비용 1.44%, 시간 2.0주로 가장 균형잡힌 방안"
+          },
+          "reasoning": "설계 변경 요청에 대해 2명의 에이전트가 논의. 선택된 방안: 비용 1.44%, 시간 2.0주로 가장 균형잡힌 방안"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "신규",
+          "report": "",
+          "opinions": {
+            "건축주": {
+              "concern_level": "낮음",
+              "priority": "비용 최소화",
+              "opinion": "도면 승인 지연에 대해 낮음 수준의 우려. 전문가 의견을 듣고 최적 방안 결정 필요.",
+              "severity_assessment": 6,
+              "budget_tolerance": "1.0%"
+            },
+            "시공사": {
+              "field_assessment": "도면 승인 지연 - 현장 조치 가능",
+              "bim_detection": "BIM 무관",
+              "severity_assessment": 6,
+              "opinion": "현장 조정 필요. 예상 소요 5주.",
+              "impact_on_schedule": "후속 공정 5주 지연 예상"
+            }
+          },
+          "severity": {
+            "agent_consensus": 3.5999999999999996,
+            "kpi_impact": -0.6325000000000001,
+            "final_delay_weeks": 2.4,
+            "final_cost_increase_pct": 0.27
+          },
+          "solutions": [
+            {
+              "option_id": "SOL-C1",
+              "proposer": "시공사",
+              "description": "정상 공정대로 처리",
+              "time_weeks": 4.0,
+              "cost_increase_pct": 0.3,
+              "quality_impact": "높음",
+              "risk_level": "낮음",
+              "agent": "시공사"
+            },
+            {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 2.5,
+              "cost_increase_pct": 0.6,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            }
+          ],
+          "selected": {
+            "selected_solution": {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 2.5,
+              "cost_increase_pct": 0.6,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            },
+            "reasoning": "비용 0.60%, 시간 2.5주로 가장 균형잡힌 방안"
+          },
+          "reasoning": "도면 승인 지연에 대해 2명의 에이전트가 논의. 선택된 방안: 비용 0.60%, 시간 2.5주로 가장 균형잡힌 방안"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 2,
+        "active_issues_count": 0,
+        "key_decisions": 2
+      }
+    },
+    {
+      "day": 1,
+      "progress_rate": 0.00205761316872428,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "6.8%",
+          "note": "1일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "6.0%",
+          "note": "1일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 2,
+      "progress_rate": 0.00411522633744856,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "13.6%",
+          "note": "2일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "11.9%",
+          "note": "2일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 3,
+      "progress_rate": 0.006172839506172839,
+      "discussions": [
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "신규",
+          "report": "현장에서 자재 조달 지연 발견. 카테고리: 자재, 위치: [현장 위치]",
+          "opinions": {
+            "건축주": {
+              "concern_level": "보통",
+              "priority": "비용 최소화",
+              "opinion": "자재 조달 지연에 대해 보통 수준의 우려. 전문가 의견을 듣고 최적 방안 결정 필요.",
+              "severity_assessment": 6,
+              "budget_tolerance": "1.0%"
+            },
+            "시공사": {
+              "field_assessment": "자재 조달 지연 - 현장 조치 가능",
+              "bim_detection": "BIM 무관",
+              "severity_assessment": 7,
+              "opinion": "현장 조정 필요. 예상 소요 4주.",
+              "impact_on_schedule": "후속 공정 4주 지연 예상"
+            }
+          },
+          "severity": {
+            "agent_consensus": 3.9,
+            "kpi_impact": -0.637,
+            "final_delay_weeks": 2.2,
+            "final_cost_increase_pct": 0.47
+          },
+          "solutions": [
+            {
+              "option_id": "SOL-C1",
+              "proposer": "시공사",
+              "description": "정상 공정대로 처리",
+              "time_weeks": 3.2,
+              "cost_increase_pct": 0.54,
+              "quality_impact": "높음",
+              "risk_level": "낮음",
+              "agent": "시공사"
+            },
+            {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 2.0,
+              "cost_increase_pct": 1.08,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            }
+          ],
+          "selected": {
+            "selected_solution": {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 2.0,
+              "cost_increase_pct": 1.08,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            },
+            "reasoning": "비용 1.08%, 시간 2.0주로 가장 균형잡힌 방안"
+          },
+          "reasoning": "자재 조달 지연에 대해 2명의 에이전트가 논의. 선택된 방안: 비용 1.08%, 시간 2.0주로 가장 균형잡힌 방안"
+        },
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "20.4%",
+          "note": "3일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "17.9%",
+          "note": "3일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 1,
+        "active_issues_count": 2,
+        "key_decisions": 1
+      }
+    },
+    {
+      "day": 4,
+      "progress_rate": 0.00823045267489712,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "27.2%",
+          "note": "4일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "23.8%",
+          "note": "4일째 작업 중"
+        },
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "6.5%",
+          "note": "1일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 3,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 5,
+      "progress_rate": 0.0102880658436214,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "34.0%",
+          "note": "5일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "29.8%",
+          "note": "5일째 작업 중"
+        },
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "13.0%",
+          "note": "2일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 3,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 6,
+      "progress_rate": 0.012345679012345678,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "40.8%",
+          "note": "6일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "35.7%",
+          "note": "6일째 작업 중"
+        },
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "19.5%",
+          "note": "3일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 3,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 7,
+      "progress_rate": 0.01440329218106996,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "47.6%",
+          "note": "7일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "41.7%",
+          "note": "7일째 작업 중"
+        },
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "26.0%",
+          "note": "4일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 3,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 8,
+      "progress_rate": 0.01646090534979424,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "54.4%",
+          "note": "8일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "47.6%",
+          "note": "8일째 작업 중"
+        },
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "32.5%",
+          "note": "5일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 3,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 9,
+      "progress_rate": 0.018518518518518517,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "61.2%",
+          "note": "9일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "53.6%",
+          "note": "9일째 작업 중"
+        },
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "39.0%",
+          "note": "6일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 3,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 10,
+      "progress_rate": 0.0205761316872428,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "68.0%",
+          "note": "10일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "59.5%",
+          "note": "10일째 작업 중"
+        },
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "45.5%",
+          "note": "7일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 3,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 11,
+      "progress_rate": 0.02263374485596708,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "74.8%",
+          "note": "11일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "65.5%",
+          "note": "11일째 작업 중"
+        },
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "51.9%",
+          "note": "8일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 3,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 12,
+      "progress_rate": 0.024691358024691357,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "81.6%",
+          "note": "12일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "71.4%",
+          "note": "12일째 작업 중"
+        },
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "58.4%",
+          "note": "9일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 3,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 13,
+      "progress_rate": 0.026748971193415638,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "88.4%",
+          "note": "13일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "77.4%",
+          "note": "13일째 작업 중"
+        },
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "64.9%",
+          "note": "10일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 3,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 14,
+      "progress_rate": 0.02880658436213992,
+      "discussions": [
+        {
+          "issue_id": "T001",
+          "issue_name": "설계 변경 요청",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "95.2%",
+          "note": "14일째 작업 중"
+        },
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "83.3%",
+          "note": "14일째 작업 중"
+        },
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "71.4%",
+          "note": "11일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 3,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 15,
+      "progress_rate": 0.030864197530864196,
+      "discussions": [
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "89.3%",
+          "note": "15일째 작업 중"
+        },
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "77.9%",
+          "note": "12일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 16,
+      "progress_rate": 0.03292181069958848,
+      "discussions": [
+        {
+          "issue_id": "T003",
+          "issue_name": "도면 승인 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "95.2%",
+          "note": "16일째 작업 중"
+        },
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "84.4%",
+          "note": "13일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 17,
+      "progress_rate": 0.03497942386831276,
+      "discussions": [
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "90.9%",
+          "note": "14일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 1,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 18,
+      "progress_rate": 0.037037037037037035,
+      "discussions": [
+        {
+          "issue_id": "T008",
+          "issue_name": "자재 조달 지연",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "97.4%",
+          "note": "15일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 1,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 122,
+      "progress_rate": 0.25102880658436216,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "신규",
+          "report": "현장에서 도면 간섭 미발견 발견. 카테고리: 설계, 위치: [현장 위치]",
+          "opinions": {
+            "건축주": {
+              "concern_level": "높음",
+              "priority": "비용 최소화",
+              "opinion": "도면 간섭 미발견에 대해 높음 수준의 우려. 전문가 의견을 듣고 최적 방안 결정 필요.",
+              "severity_assessment": 9,
+              "budget_tolerance": "1.0%"
+            },
+            "시공사": {
+              "field_assessment": "도면 간섭 미발견 - 현장 재시공 필요",
+              "bim_detection": "BIM 무관",
+              "severity_assessment": 8,
+              "opinion": "현장 중단 필요. 예상 소요 5주.",
+              "impact_on_schedule": "후속 공정 5주 지연 예상"
+            }
+          },
+          "severity": {
+            "agent_consensus": 5.1,
+            "kpi_impact": -0.637,
+            "final_delay_weeks": 3.1,
+            "final_cost_increase_pct": 1.01
+          },
+          "solutions": [
+            {
+              "option_id": "SOL-C1",
+              "proposer": "시공사",
+              "description": "정상 공정대로 처리",
+              "time_weeks": 4.0,
+              "cost_increase_pct": 1.08,
+              "quality_impact": "높음",
+              "risk_level": "낮음",
+              "agent": "시공사"
+            },
+            {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 2.5,
+              "cost_increase_pct": 2.16,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            }
+          ],
+          "selected": {
+            "selected_solution": {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 2.5,
+              "cost_increase_pct": 2.16,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            },
+            "reasoning": "비용 2.16%, 시간 2.5주로 가장 균형잡힌 방안"
+          },
+          "reasoning": "도면 간섭 미발견에 대해 2명의 에이전트가 논의. 선택된 방안: 비용 2.16%, 시간 2.5주로 가장 균형잡힌 방안"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "신규",
+          "report": "현장에서 안전사고 발생 발견. 카테고리: 안전, 위치: [현장 위치]",
+          "opinions": {
+            "건축주": {
+              "concern_level": "높음",
+              "priority": "비용 최소화",
+              "opinion": "안전사고 발생에 대해 높음 수준의 우려. 전문가 의견을 듣고 최적 방안 결정 필요.",
+              "severity_assessment": 9,
+              "budget_tolerance": "1.0%"
+            },
+            "시공사": {
+              "field_assessment": "안전사고 발생 - 현장 재시공 필요",
+              "bim_detection": "BIM 무관",
+              "severity_assessment": 8,
+              "opinion": "현장 중단 필요. 예상 소요 7주.",
+              "impact_on_schedule": "후속 공정 7주 지연 예상"
+            }
+          },
+          "severity": {
+            "agent_consensus": 5.1,
+            "kpi_impact": -0.637,
+            "final_delay_weeks": 4.0,
+            "final_cost_increase_pct": 1.33
+          },
+          "solutions": [
+            {
+              "option_id": "SOL-C1",
+              "proposer": "시공사",
+              "description": "정상 공정대로 처리",
+              "time_weeks": 5.6000000000000005,
+              "cost_increase_pct": 1.5,
+              "quality_impact": "높음",
+              "risk_level": "낮음",
+              "agent": "시공사"
+            },
+            {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 3.5,
+              "cost_increase_pct": 3.0,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            }
+          ],
+          "selected": {
+            "selected_solution": {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 3.5,
+              "cost_increase_pct": 3.0,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            },
+            "reasoning": "비용 3.00%, 시간 3.5주로 가장 균형잡힌 방안"
+          },
+          "reasoning": "안전사고 발생에 대해 2명의 에이전트가 논의. 선택된 방안: 비용 3.00%, 시간 3.5주로 가장 균형잡힌 방안"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 2,
+        "active_issues_count": 0,
+        "key_decisions": 2
+      }
+    },
+    {
+      "day": 123,
+      "progress_rate": 0.25308641975308643,
+      "discussions": [
+        {
+          "issue_id": "T007",
+          "issue_name": "RFI 과다 발생",
+          "type": "신규",
+          "report": "현장에서 RFI 과다 발생 발견. 카테고리: 설계, 위치: [현장 위치]",
+          "opinions": {
+            "건축주": {
+              "concern_level": "낮음",
+              "priority": "비용 최소화",
+              "opinion": "RFI 과다 발생에 대해 낮음 수준의 우려. 전문가 의견을 듣고 최적 방안 결정 필요.",
+              "severity_assessment": 6,
+              "budget_tolerance": "1.0%"
+            },
+            "시공사": {
+              "field_assessment": "RFI 과다 발생 - 현장 조치 가능",
+              "bim_detection": "BIM 무관",
+              "severity_assessment": 6,
+              "opinion": "현장 조정 필요. 예상 소요 2주.",
+              "impact_on_schedule": "후속 공정 2주 지연 예상"
+            }
+          },
+          "severity": {
+            "agent_consensus": 3.5999999999999996,
+            "kpi_impact": -0.508,
+            "final_delay_weeks": 0.9,
+            "final_cost_increase_pct": 0.19
+          },
+          "solutions": [
+            {
+              "option_id": "SOL-C1",
+              "proposer": "시공사",
+              "description": "정상 공정대로 처리",
+              "time_weeks": 1.6,
+              "cost_increase_pct": 0.24,
+              "quality_impact": "높음",
+              "risk_level": "낮음",
+              "agent": "시공사"
+            },
+            {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 1.0,
+              "cost_increase_pct": 0.48,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            }
+          ],
+          "selected": {
+            "selected_solution": {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 1.0,
+              "cost_increase_pct": 0.48,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            },
+            "reasoning": "비용 0.48%, 시간 1.0주로 가장 균형잡힌 방안"
+          },
+          "reasoning": "RFI 과다 발생에 대해 2명의 에이전트가 논의. 선택된 방안: 비용 0.48%, 시간 1.0주로 가장 균형잡힌 방안"
+        },
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "4.6%",
+          "note": "1일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "3.6%",
+          "note": "1일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 1,
+        "active_issues_count": 2,
+        "key_decisions": 1
+      }
+    },
+    {
+      "day": 124,
+      "progress_rate": 0.2551440329218107,
+      "discussions": [
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "신규",
+          "report": "현장에서 설비 간섭 현장 발견 발견. 카테고리: 시공, 위치: [현장 위치]",
+          "opinions": {
+            "건축주": {
+              "concern_level": "높음",
+              "priority": "비용 최소화",
+              "opinion": "설비 간섭 현장 발견에 대해 높음 수준의 우려. 전문가 의견을 듣고 최적 방안 결정 필요.",
+              "severity_assessment": 9,
+              "budget_tolerance": "1.0%"
+            },
+            "시공사": {
+              "field_assessment": "설비 간섭 현장 발견 - 현장 재시공 필요",
+              "bim_detection": "BIM 무관",
+              "severity_assessment": 9,
+              "opinion": "현장 중단 필요. 예상 소요 6주.",
+              "impact_on_schedule": "후속 공정 6주 지연 예상"
+            }
+          },
+          "severity": {
+            "agent_consensus": 5.3999999999999995,
+            "kpi_impact": -0.637,
+            "final_delay_weeks": 3.6,
+            "final_cost_increase_pct": 1.14
+          },
+          "solutions": [
+            {
+              "option_id": "SOL-C1",
+              "proposer": "시공사",
+              "description": "정상 공정대로 처리",
+              "time_weeks": 4.800000000000001,
+              "cost_increase_pct": 1.2,
+              "quality_impact": "높음",
+              "risk_level": "낮음",
+              "agent": "시공사"
+            },
+            {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 3.0,
+              "cost_increase_pct": 2.4,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            }
+          ],
+          "selected": {
+            "selected_solution": {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 3.0,
+              "cost_increase_pct": 2.4,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            },
+            "reasoning": "비용 2.40%, 시간 3.0주로 가장 균형잡힌 방안"
+          },
+          "reasoning": "설비 간섭 현장 발견에 대해 2명의 에이전트가 논의. 선택된 방안: 비용 2.40%, 시간 3.0주로 가장 균형잡힌 방안"
+        },
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "9.2%",
+          "note": "2일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "7.1%",
+          "note": "2일째 작업 중"
+        },
+        {
+          "issue_id": "T007",
+          "issue_name": "RFI 과다 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "15.9%",
+          "note": "1일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 1,
+        "active_issues_count": 3,
+        "key_decisions": 1
+      }
+    },
+    {
+      "day": 125,
+      "progress_rate": 0.257201646090535,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "13.8%",
+          "note": "3일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "10.7%",
+          "note": "3일째 작업 중"
+        },
+        {
+          "issue_id": "T007",
+          "issue_name": "RFI 과다 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "31.7%",
+          "note": "2일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "4.0%",
+          "note": "1일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 4,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 126,
+      "progress_rate": 0.25925925925925924,
+      "discussions": [
+        {
+          "issue_id": "T006",
+          "issue_name": "우기 장마 영향",
+          "type": "신규",
+          "report": "현장에서 우기 장마 영향 발견. 카테고리: 외부요인, 위치: [현장 위치]",
+          "opinions": {
+            "건축주": {
+              "concern_level": "낮음",
+              "priority": "비용 최소화",
+              "opinion": "우기 장마 영향에 대해 낮음 수준의 우려. 전문가 의견을 듣고 최적 방안 결정 필요.",
+              "severity_assessment": 6,
+              "budget_tolerance": "1.0%"
+            },
+            "시공사": {
+              "field_assessment": "우기 장마 영향 - 현장 조치 가능",
+              "bim_detection": "BIM 무관",
+              "severity_assessment": 6,
+              "opinion": "현장 조정 필요. 예상 소요 3주.",
+              "impact_on_schedule": "후속 공정 3주 지연 예상"
+            }
+          },
+          "severity": {
+            "agent_consensus": 3.5999999999999996,
+            "kpi_impact": -0.6385000000000001,
+            "final_delay_weeks": 1.5,
+            "final_cost_increase_pct": 0.27
+          },
+          "solutions": [
+            {
+              "option_id": "SOL-C1",
+              "proposer": "시공사",
+              "description": "정상 공정대로 처리",
+              "time_weeks": 2.4000000000000004,
+              "cost_increase_pct": 0.3,
+              "quality_impact": "높음",
+              "risk_level": "낮음",
+              "agent": "시공사"
+            },
+            {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 1.5,
+              "cost_increase_pct": 0.6,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            }
+          ],
+          "selected": {
+            "selected_solution": {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 1.5,
+              "cost_increase_pct": 0.6,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            },
+            "reasoning": "비용 0.60%, 시간 1.5주로 가장 균형잡힌 방안"
+          },
+          "reasoning": "우기 장마 영향에 대해 2명의 에이전트가 논의. 선택된 방안: 비용 0.60%, 시간 1.5주로 가장 균형잡힌 방안"
+        },
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "18.4%",
+          "note": "4일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "14.3%",
+          "note": "4일째 작업 중"
+        },
+        {
+          "issue_id": "T007",
+          "issue_name": "RFI 과다 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "47.6%",
+          "note": "3일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "7.9%",
+          "note": "2일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 1,
+        "active_issues_count": 4,
+        "key_decisions": 1
+      }
+    },
+    {
+      "day": 127,
+      "progress_rate": 0.2613168724279835,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "23.0%",
+          "note": "5일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "17.9%",
+          "note": "5일째 작업 중"
+        },
+        {
+          "issue_id": "T007",
+          "issue_name": "RFI 과다 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "63.5%",
+          "note": "4일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "11.9%",
+          "note": "3일째 작업 중"
+        },
+        {
+          "issue_id": "T006",
+          "issue_name": "우기 장마 영향",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "9.5%",
+          "note": "1일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 5,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 128,
+      "progress_rate": 0.26337448559670784,
+      "discussions": [
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "신규",
+          "report": "현장에서 현장 착오 시공 발견. 카테고리: 시공, 위치: [현장 위치]",
+          "opinions": {
+            "건축주": {
+              "concern_level": "보통",
+              "priority": "비용 최소화",
+              "opinion": "현장 착오 시공에 대해 보통 수준의 우려. 전문가 의견을 듣고 최적 방안 결정 필요.",
+              "severity_assessment": 6,
+              "budget_tolerance": "1.0%"
+            },
+            "시공사": {
+              "field_assessment": "현장 착오 시공 - 현장 조치 가능",
+              "bim_detection": "BIM 무관",
+              "severity_assessment": 7,
+              "opinion": "현장 조정 필요. 예상 소요 4주.",
+              "impact_on_schedule": "후속 공정 4주 지연 예상"
+            }
+          },
+          "severity": {
+            "agent_consensus": 3.9,
+            "kpi_impact": -0.6355000000000001,
+            "final_delay_weeks": 2.2,
+            "final_cost_increase_pct": 0.47
+          },
+          "solutions": [
+            {
+              "option_id": "SOL-C1",
+              "proposer": "시공사",
+              "description": "정상 공정대로 처리",
+              "time_weeks": 3.2,
+              "cost_increase_pct": 0.54,
+              "quality_impact": "높음",
+              "risk_level": "낮음",
+              "agent": "시공사"
+            },
+            {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 2.0,
+              "cost_increase_pct": 1.08,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            }
+          ],
+          "selected": {
+            "selected_solution": {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 2.0,
+              "cost_increase_pct": 1.08,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            },
+            "reasoning": "비용 1.08%, 시간 2.0주로 가장 균형잡힌 방안"
+          },
+          "reasoning": "현장 착오 시공에 대해 2명의 에이전트가 논의. 선택된 방안: 비용 1.08%, 시간 2.0주로 가장 균형잡힌 방안"
+        },
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "27.6%",
+          "note": "6일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "21.4%",
+          "note": "6일째 작업 중"
+        },
+        {
+          "issue_id": "T007",
+          "issue_name": "RFI 과다 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "79.4%",
+          "note": "5일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "15.9%",
+          "note": "4일째 작업 중"
+        },
+        {
+          "issue_id": "T006",
+          "issue_name": "우기 장마 영향",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "19.0%",
+          "note": "2일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 1,
+        "active_issues_count": 5,
+        "key_decisions": 1
+      }
+    },
+    {
+      "day": 129,
+      "progress_rate": 0.2654320987654321,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "32.3%",
+          "note": "7일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "25.0%",
+          "note": "7일째 작업 중"
+        },
+        {
+          "issue_id": "T007",
+          "issue_name": "RFI 과다 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "95.2%",
+          "note": "6일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "19.8%",
+          "note": "5일째 작업 중"
+        },
+        {
+          "issue_id": "T006",
+          "issue_name": "우기 장마 영향",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "28.6%",
+          "note": "3일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 6,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 130,
+      "progress_rate": 0.2674897119341564,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "36.9%",
+          "note": "8일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "28.6%",
+          "note": "8일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "23.8%",
+          "note": "6일째 작업 중"
+        },
+        {
+          "issue_id": "T006",
+          "issue_name": "우기 장마 영향",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "38.1%",
+          "note": "4일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "0.0%",
+          "note": "0일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 5,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 131,
+      "progress_rate": 0.26954732510288065,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "41.5%",
+          "note": "9일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "32.1%",
+          "note": "9일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "27.8%",
+          "note": "7일째 작업 중"
+        },
+        {
+          "issue_id": "T006",
+          "issue_name": "우기 장마 영향",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "47.6%",
+          "note": "5일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "6.5%",
+          "note": "1일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 5,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 132,
+      "progress_rate": 0.2716049382716049,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "46.1%",
+          "note": "10일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "35.7%",
+          "note": "10일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "31.7%",
+          "note": "8일째 작업 중"
+        },
+        {
+          "issue_id": "T006",
+          "issue_name": "우기 장마 영향",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "57.1%",
+          "note": "6일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "13.0%",
+          "note": "2일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 5,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 133,
+      "progress_rate": 0.2736625514403292,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "50.7%",
+          "note": "11일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "39.3%",
+          "note": "11일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "35.7%",
+          "note": "9일째 작업 중"
+        },
+        {
+          "issue_id": "T006",
+          "issue_name": "우기 장마 영향",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "66.7%",
+          "note": "7일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "19.5%",
+          "note": "3일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 5,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 134,
+      "progress_rate": 0.2757201646090535,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "55.3%",
+          "note": "12일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "42.9%",
+          "note": "12일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "39.7%",
+          "note": "10일째 작업 중"
+        },
+        {
+          "issue_id": "T006",
+          "issue_name": "우기 장마 영향",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "76.2%",
+          "note": "8일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "26.0%",
+          "note": "4일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 5,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 135,
+      "progress_rate": 0.2777777777777778,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "59.9%",
+          "note": "13일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "46.4%",
+          "note": "13일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "43.7%",
+          "note": "11일째 작업 중"
+        },
+        {
+          "issue_id": "T006",
+          "issue_name": "우기 장마 영향",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "85.7%",
+          "note": "9일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "32.5%",
+          "note": "5일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 5,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 136,
+      "progress_rate": 0.27983539094650206,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "64.5%",
+          "note": "14일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "50.0%",
+          "note": "14일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "47.6%",
+          "note": "12일째 작업 중"
+        },
+        {
+          "issue_id": "T006",
+          "issue_name": "우기 장마 영향",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "95.2%",
+          "note": "10일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "39.0%",
+          "note": "6일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 5,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 137,
+      "progress_rate": 0.28189300411522633,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "69.1%",
+          "note": "15일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "53.6%",
+          "note": "15일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "51.6%",
+          "note": "13일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "45.5%",
+          "note": "7일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 4,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 138,
+      "progress_rate": 0.2839506172839506,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "73.7%",
+          "note": "16일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "57.1%",
+          "note": "16일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "55.6%",
+          "note": "14일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "51.9%",
+          "note": "8일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 4,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 139,
+      "progress_rate": 0.28600823045267487,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "78.3%",
+          "note": "17일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "60.7%",
+          "note": "17일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "59.5%",
+          "note": "15일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "58.4%",
+          "note": "9일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 4,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 140,
+      "progress_rate": 0.2880658436213992,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "82.9%",
+          "note": "18일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "64.3%",
+          "note": "18일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "63.5%",
+          "note": "16일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "64.9%",
+          "note": "10일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 4,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 141,
+      "progress_rate": 0.29012345679012347,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "87.6%",
+          "note": "19일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "67.9%",
+          "note": "19일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "67.5%",
+          "note": "17일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "71.4%",
+          "note": "11일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 4,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 142,
+      "progress_rate": 0.29218106995884774,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "92.2%",
+          "note": "20일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "71.4%",
+          "note": "20일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "71.4%",
+          "note": "18일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "77.9%",
+          "note": "12일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 4,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 143,
+      "progress_rate": 0.294238683127572,
+      "discussions": [
+        {
+          "issue_id": "T002",
+          "issue_name": "도면 간섭 미발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "96.8%",
+          "note": "21일째 작업 중"
+        },
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "75.0%",
+          "note": "21일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "75.4%",
+          "note": "19일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "84.4%",
+          "note": "13일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 4,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 144,
+      "progress_rate": 0.2962962962962963,
+      "discussions": [
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "78.6%",
+          "note": "22일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "79.4%",
+          "note": "20일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "90.9%",
+          "note": "14일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 3,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 145,
+      "progress_rate": 0.29835390946502055,
+      "discussions": [
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "82.1%",
+          "note": "23일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "83.3%",
+          "note": "21일째 작업 중"
+        },
+        {
+          "issue_id": "T004",
+          "issue_name": "현장 착오 시공",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "97.4%",
+          "note": "15일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 3,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 146,
+      "progress_rate": 0.3004115226337449,
+      "discussions": [
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "85.7%",
+          "note": "24일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "87.3%",
+          "note": "22일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 147,
+      "progress_rate": 0.30246913580246915,
+      "discussions": [
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "89.3%",
+          "note": "25일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "91.3%",
+          "note": "23일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 148,
+      "progress_rate": 0.3045267489711934,
+      "discussions": [
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "92.9%",
+          "note": "26일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "95.2%",
+          "note": "24일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 149,
+      "progress_rate": 0.3065843621399177,
+      "discussions": [
+        {
+          "issue_id": "T009",
+          "issue_name": "안전사고 발생",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "96.4%",
+          "note": "27일째 작업 중"
+        },
+        {
+          "issue_id": "T005",
+          "issue_name": "설비 간섭 현장 발견",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "99.2%",
+          "note": "25일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 366,
+      "progress_rate": 0.7530864197530864,
+      "discussions": [
+        {
+          "issue_id": "T010",
+          "issue_name": "마감재 하자",
+          "type": "신규",
+          "report": "현장에서 마감재 하자 발견. 카테고리: 품질, 위치: [현장 위치]",
+          "opinions": {
+            "건축주": {
+              "concern_level": "보통",
+              "priority": "비용 최소화",
+              "opinion": "마감재 하자에 대해 보통 수준의 우려. 전문가 의견을 듣고 최적 방안 결정 필요.",
+              "severity_assessment": 6,
+              "budget_tolerance": "1.0%"
+            },
+            "시공사": {
+              "field_assessment": "마감재 하자 - 현장 조치 가능",
+              "bim_detection": "BIM 무관",
+              "severity_assessment": 6,
+              "opinion": "현장 조정 필요. 예상 소요 3주.",
+              "impact_on_schedule": "후속 공정 3주 지연 예상"
+            }
+          },
+          "severity": {
+            "agent_consensus": 3.5999999999999996,
+            "kpi_impact": -0.637,
+            "final_delay_weeks": 1.5,
+            "final_cost_increase_pct": 0.3
+          },
+          "solutions": [
+            {
+              "option_id": "SOL-C1",
+              "proposer": "시공사",
+              "description": "정상 공정대로 처리",
+              "time_weeks": 2.4000000000000004,
+              "cost_increase_pct": 0.36,
+              "quality_impact": "높음",
+              "risk_level": "낮음",
+              "agent": "시공사"
+            },
+            {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 1.5,
+              "cost_increase_pct": 0.72,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            }
+          ],
+          "selected": {
+            "selected_solution": {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 1.5,
+              "cost_increase_pct": 0.72,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            },
+            "reasoning": "비용 0.72%, 시간 1.5주로 가장 균형잡힌 방안"
+          },
+          "reasoning": "마감재 하자에 대해 2명의 에이전트가 논의. 선택된 방안: 비용 0.72%, 시간 1.5주로 가장 균형잡힌 방안"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 1,
+        "active_issues_count": 0,
+        "key_decisions": 1
+      }
+    },
+    {
+      "day": 367,
+      "progress_rate": 0.7551440329218106,
+      "discussions": [
+        {
+          "issue_id": "T010",
+          "issue_name": "마감재 하자",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "9.5%",
+          "note": "1일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 1,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 368,
+      "progress_rate": 0.757201646090535,
+      "discussions": [
+        {
+          "issue_id": "T011",
+          "issue_name": "준공 검사 지적사항",
+          "type": "신규",
+          "report": "현장에서 준공 검사 지적사항 발견. 카테고리: 행정, 위치: [현장 위치]",
+          "opinions": {
+            "건축주": {
+              "concern_level": "보통",
+              "priority": "비용 최소화",
+              "opinion": "준공 검사 지적사항에 대해 보통 수준의 우려. 전문가 의견을 듣고 최적 방안 결정 필요.",
+              "severity_assessment": 6,
+              "budget_tolerance": "1.0%"
+            },
+            "시공사": {
+              "field_assessment": "준공 검사 지적사항 - 현장 조치 가능",
+              "bim_detection": "BIM 무관",
+              "severity_assessment": 6,
+              "opinion": "현장 조정 필요. 예상 소요 4주.",
+              "impact_on_schedule": "후속 공정 4주 지연 예상"
+            }
+          },
+          "severity": {
+            "agent_consensus": 3.5999999999999996,
+            "kpi_impact": -0.634,
+            "final_delay_weeks": 1.8,
+            "final_cost_increase_pct": 0.33
+          },
+          "solutions": [
+            {
+              "option_id": "SOL-C1",
+              "proposer": "시공사",
+              "description": "정상 공정대로 처리",
+              "time_weeks": 3.2,
+              "cost_increase_pct": 0.42,
+              "quality_impact": "높음",
+              "risk_level": "낮음",
+              "agent": "시공사"
+            },
+            {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 2.0,
+              "cost_increase_pct": 0.84,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            }
+          ],
+          "selected": {
+            "selected_solution": {
+              "option_id": "SOL-C2",
+              "proposer": "시공사",
+              "description": "인력/장비 증투하여 신속 처리",
+              "time_weeks": 2.0,
+              "cost_increase_pct": 0.84,
+              "quality_impact": "보통",
+              "risk_level": "보통",
+              "agent": "시공사"
+            },
+            "reasoning": "비용 0.84%, 시간 2.0주로 가장 균형잡힌 방안"
+          },
+          "reasoning": "준공 검사 지적사항에 대해 2명의 에이전트가 논의. 선택된 방안: 비용 0.84%, 시간 2.0주로 가장 균형잡힌 방안"
+        },
+        {
+          "issue_id": "T010",
+          "issue_name": "마감재 하자",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "19.0%",
+          "note": "2일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 1,
+        "active_issues_count": 1,
+        "key_decisions": 1
+      }
+    },
+    {
+      "day": 369,
+      "progress_rate": 0.7592592592592593,
+      "discussions": [
+        {
+          "issue_id": "T010",
+          "issue_name": "마감재 하자",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "28.6%",
+          "note": "3일째 작업 중"
+        },
+        {
+          "issue_id": "T011",
+          "issue_name": "준공 검사 지적사항",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "7.9%",
+          "note": "1일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 370,
+      "progress_rate": 0.7613168724279835,
+      "discussions": [
+        {
+          "issue_id": "T010",
+          "issue_name": "마감재 하자",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "38.1%",
+          "note": "4일째 작업 중"
+        },
+        {
+          "issue_id": "T011",
+          "issue_name": "준공 검사 지적사항",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "15.9%",
+          "note": "2일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 371,
+      "progress_rate": 0.7633744855967078,
+      "discussions": [
+        {
+          "issue_id": "T010",
+          "issue_name": "마감재 하자",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "47.6%",
+          "note": "5일째 작업 중"
+        },
+        {
+          "issue_id": "T011",
+          "issue_name": "준공 검사 지적사항",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "23.8%",
+          "note": "3일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 372,
+      "progress_rate": 0.7654320987654321,
+      "discussions": [
+        {
+          "issue_id": "T010",
+          "issue_name": "마감재 하자",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "57.1%",
+          "note": "6일째 작업 중"
+        },
+        {
+          "issue_id": "T011",
+          "issue_name": "준공 검사 지적사항",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "31.7%",
+          "note": "4일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 373,
+      "progress_rate": 0.7674897119341564,
+      "discussions": [
+        {
+          "issue_id": "T010",
+          "issue_name": "마감재 하자",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "66.7%",
+          "note": "7일째 작업 중"
+        },
+        {
+          "issue_id": "T011",
+          "issue_name": "준공 검사 지적사항",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "39.7%",
+          "note": "5일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 374,
+      "progress_rate": 0.7695473251028807,
+      "discussions": [
+        {
+          "issue_id": "T010",
+          "issue_name": "마감재 하자",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "76.2%",
+          "note": "8일째 작업 중"
+        },
+        {
+          "issue_id": "T011",
+          "issue_name": "준공 검사 지적사항",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "47.6%",
+          "note": "6일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 375,
+      "progress_rate": 0.7716049382716049,
+      "discussions": [
+        {
+          "issue_id": "T010",
+          "issue_name": "마감재 하자",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "85.7%",
+          "note": "9일째 작업 중"
+        },
+        {
+          "issue_id": "T011",
+          "issue_name": "준공 검사 지적사항",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "55.6%",
+          "note": "7일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 376,
+      "progress_rate": 0.7736625514403292,
+      "discussions": [
+        {
+          "issue_id": "T010",
+          "issue_name": "마감재 하자",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "95.2%",
+          "note": "10일째 작업 중"
+        },
+        {
+          "issue_id": "T011",
+          "issue_name": "준공 검사 지적사항",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "63.5%",
+          "note": "8일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 2,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 377,
+      "progress_rate": 0.7757201646090535,
+      "discussions": [
+        {
+          "issue_id": "T011",
+          "issue_name": "준공 검사 지적사항",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "71.4%",
+          "note": "9일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 1,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 378,
+      "progress_rate": 0.7777777777777778,
+      "discussions": [
+        {
+          "issue_id": "T011",
+          "issue_name": "준공 검사 지적사항",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "79.4%",
+          "note": "10일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 1,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 379,
+      "progress_rate": 0.779835390946502,
+      "discussions": [
+        {
+          "issue_id": "T011",
+          "issue_name": "준공 검사 지적사항",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "87.3%",
+          "note": "11일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 1,
+        "key_decisions": 0
+      }
+    },
+    {
+      "day": 380,
+      "progress_rate": 0.7818930041152263,
+      "discussions": [
+        {
+          "issue_id": "T011",
+          "issue_name": "준공 검사 지적사항",
+          "type": "진행중",
+          "status": "해결중",
+          "progress": "95.2%",
+          "note": "12일째 작업 중"
+        }
+      ],
+      "decisions": [],
+      "summary": {
+        "new_issues_count": 0,
+        "active_issues_count": 1,
+        "key_decisions": 0
+      }
+    }
+  ],
+  "all_issues": [
+    {
+      "ID": "T001",
+      "이슈명": "설계 변경 요청",
+      "카테고리": "설계",
+      "발생일": 0,
+      "상태": "해결완료",
+      "우선순위": "보통",
+      "진행률": "100.0%",
+      "심각도": "S2",
+      "예상지연": "14.7일",
+      "실제지연": "15.0일",
+      "비용증가": "0.54%",
+      "시작일": 0,
+      "완료일": 15,
+      "작업일수": 15
+    },
+    {
+      "ID": "T003",
+      "이슈명": "도면 승인 지연",
+      "카테고리": "행정",
+      "발생일": 0,
+      "상태": "해결완료",
+      "우선순위": "보통",
+      "진행률": "100.0%",
+      "심각도": "S2",
+      "예상지연": "16.8일",
+      "실제지연": "17.0일",
+      "비용증가": "0.27%",
+      "시작일": 0,
+      "완료일": 17,
+      "작업일수": 17
+    },
+    {
+      "ID": "T008",
+      "이슈명": "자재 조달 지연",
+      "카테고리": "자재",
+      "발생일": 3,
+      "상태": "해결완료",
+      "우선순위": "보통",
+      "진행률": "100.0%",
+      "심각도": "S2",
+      "예상지연": "15.4일",
+      "실제지연": "16.0일",
+      "비용증가": "0.47%",
+      "시작일": 3,
+      "완료일": 19,
+      "작업일수": 16
+    },
+    {
+      "ID": "T002",
+      "이슈명": "도면 간섭 미발견",
+      "카테고리": "설계",
+      "발생일": 122,
+      "상태": "해결완료",
+      "우선순위": "보통",
+      "진행률": "100.0%",
+      "심각도": "S3",
+      "예상지연": "21.7일",
+      "실제지연": "22.0일",
+      "비용증가": "1.01%",
+      "시작일": 122,
+      "완료일": 144,
+      "작업일수": 22
+    },
+    {
+      "ID": "T009",
+      "이슈명": "안전사고 발생",
+      "카테고리": "안전",
+      "발생일": 122,
+      "상태": "해결완료",
+      "우선순위": "보통",
+      "진행률": "100.0%",
+      "심각도": "S3",
+      "예상지연": "28.0일",
+      "실제지연": "28.0일",
+      "비용증가": "1.33%",
+      "시작일": 122,
+      "완료일": 150,
+      "작업일수": 28
+    },
+    {
+      "ID": "T007",
+      "이슈명": "RFI 과다 발생",
+      "카테고리": "설계",
+      "발생일": 123,
+      "상태": "해결완료",
+      "우선순위": "보통",
+      "진행률": "100.0%",
+      "심각도": "S2",
+      "예상지연": "6.3일",
+      "실제지연": "7.0일",
+      "비용증가": "0.19%",
+      "시작일": 123,
+      "완료일": 130,
+      "작업일수": 7
+    },
+    {
+      "ID": "T005",
+      "이슈명": "설비 간섭 현장 발견",
+      "카테고리": "시공",
+      "발생일": 124,
+      "상태": "해결완료",
+      "우선순위": "보통",
+      "진행률": "100.0%",
+      "심각도": "S3",
+      "예상지연": "25.2일",
+      "실제지연": "26.0일",
+      "비용증가": "1.14%",
+      "시작일": 124,
+      "완료일": 150,
+      "작업일수": 26
+    },
+    {
+      "ID": "T006",
+      "이슈명": "우기 장마 영향",
+      "카테고리": "외부요인",
+      "발생일": 126,
+      "상태": "해결완료",
+      "우선순위": "보통",
+      "진행률": "100.0%",
+      "심각도": "S2",
+      "예상지연": "10.5일",
+      "실제지연": "11.0일",
+      "비용증가": "0.27%",
+      "시작일": 126,
+      "완료일": 137,
+      "작업일수": 11
+    },
+    {
+      "ID": "T004",
+      "이슈명": "현장 착오 시공",
+      "카테고리": "시공",
+      "발생일": 128,
+      "상태": "해결완료",
+      "우선순위": "보통",
+      "진행률": "100.0%",
+      "심각도": "S2",
+      "예상지연": "15.4일",
+      "실제지연": "16.0일",
+      "비용증가": "0.47%",
+      "시작일": 130,
+      "완료일": 146,
+      "작업일수": 16
+    },
+    {
+      "ID": "T010",
+      "이슈명": "마감재 하자",
+      "카테고리": "품질",
+      "발생일": 366,
+      "상태": "해결완료",
+      "우선순위": "보통",
+      "진행률": "100.0%",
+      "심각도": "S2",
+      "예상지연": "10.5일",
+      "실제지연": "11.0일",
+      "비용증가": "0.30%",
+      "시작일": 366,
+      "완료일": 377,
+      "작업일수": 11
+    },
+    {
+      "ID": "T011",
+      "이슈명": "준공 검사 지적사항",
+      "카테고리": "행정",
+      "발생일": 368,
+      "상태": "해결완료",
+      "우선순위": "보통",
+      "진행률": "100.0%",
+      "심각도": "S2",
+      "예상지연": "12.6일",
+      "실제지연": "13.0일",
+      "비용증가": "0.33%",
+      "시작일": 368,
+      "완료일": 381,
+      "작업일수": 13
+    }
+  ]
+}
